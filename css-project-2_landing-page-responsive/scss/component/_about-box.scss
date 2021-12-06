@@ -1,0 +1,32 @@
+@use '../abstract/variable' as *;
+
+.about-box {
+    float: left;
+    width: 30%;
+    background-color: white;
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+
+    &:not(:last-child) {
+        margin-right: 5%;
+    }
+}
+
+.about__title {
+    padding: 3rem 0;
+    background-color: #f7f7f7;
+}
+
+.about__text {
+    line-height: 2;
+    padding: 3rem;
+}
+
+.about__btn {
+    display: inline-block;
+    width: 100%;
+    padding: 2rem 0;
+    background-color: green;
+    color: white;
+}

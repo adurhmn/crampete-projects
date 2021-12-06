@@ -1,0 +1,31 @@
+@use '../abstract/variable' as *;
+
+.article-box--main {
+    width: 40%;
+}
+
+.article__content-box {
+    height: 40rem;
+    position: relative;
+}
+
+.article__img--main {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    object-fit: cover;
+    object-position: center;
+}
+
+.article__text-box {
+    text-align: center;
+    background-color: rgba(black, .7);
+    color: white;
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

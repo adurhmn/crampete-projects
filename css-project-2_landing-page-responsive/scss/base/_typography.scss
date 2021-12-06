@@ -1,0 +1,16 @@
+@use '../abstract/variable' as *;
+
+html {
+    font-size: 62.5%;
+    font-family: 'Barlow';
+}
+
+.heading--primary {
+    font-size: $font-size-standard-heading;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p, a {
+    font-size: $font-size-standard-text;
+}
