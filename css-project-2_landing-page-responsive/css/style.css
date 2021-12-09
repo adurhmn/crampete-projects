@@ -12,6 +12,7 @@ html {
   font-family: "Barlow";
 }
 
+/* TYPOGRAPHY -------------------------------------------------- */
 .heading--primary {
   font-size: 2.4rem;
   text-transform: uppercase;
@@ -30,6 +31,8 @@ html {
 p, a {
   font-size: 1.2rem;
 }
+
+/* NAVIGATION -------------------------------------------------- */
 
 .nav {
   letter-spacing: 1px;
@@ -61,6 +64,8 @@ p, a {
   padding-bottom: 1.7rem;
 }
 
+/* BUTTONS -------------------------------------------------- */
+
 .btn-primary {
   display: inline-block;
   width: 100%;
@@ -81,6 +86,8 @@ p, a {
   border: 1px solid green;
 }
 
+/* LOGO -------------------------------------------------- */
+
 .logo {
   font-family: "Montserrat";
   font-weight: 700;
@@ -96,6 +103,7 @@ p, a {
   letter-spacing: 6px;
 }
 
+/* ABOUT-COMPONENT -------------------------------------------*/
 .about-box {
   float: left;
   width: 30%;
@@ -149,6 +157,9 @@ p, a {
     margin-top: 2rem;
   }
 }
+
+/* ARTICLE-COMPONENT -------------------------------------------- */
+
 .article-box--main {
   width: 40%;
   margin-right: 10%;
@@ -267,6 +278,9 @@ p, a {
     margin: 0 auto;
   }
 }
+
+/* PRODUCT-COMPONENT -------------------------------------------- */
+
 .products__card {
   height: 20%;
   width: 47%;
@@ -339,6 +353,9 @@ p, a {
     padding-right: 5%;
   }
 }
+
+/* HEADER-LAYOUT -------------------------------------------- */
+
 .header__info-box {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -393,6 +410,9 @@ p, a {
     text-align: center;
   }
 }
+
+/* ABOUT-LAYOUT -------------------------------------------- */
+
 .section-about {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -409,6 +429,9 @@ p, a {
     padding-bottom: 8rem;
   }
 }
+
+/* ARTICLE-LAYOUT -------------------------------------------- */
+
 .section-article {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -429,6 +452,8 @@ p, a {
   display: block;
   clear: both;
 }
+
+/* FOOTER-LAYOUT -------------------------------------------- */
 
 .footer {
   color: grey;
@@ -518,6 +543,9 @@ p, a {
     border-top: 1px solid black;
   }
 }
+
+/* UTILITY/HELPER FUNCTIONS -------------------------------------------- */
+
 .mgn-top-vsmall {
   margin-top: 1rem;
 }
@@ -580,4 +608,3 @@ p, a {
   color: white;
 }
 
-/*# sourceMappingURL=style.css.map */
