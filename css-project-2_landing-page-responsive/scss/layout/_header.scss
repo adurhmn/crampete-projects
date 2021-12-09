@@ -2,65 +2,73 @@
 @use '../abstract/mixin' as *;
 
 .header {
-}
+    &__info-box {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        background-color: $black-dark;
+        color: white;
+        @include clearfix;
+    }
 
-.header__info-box {
-    padding: .5rem $container-padding-left-right;
-    background-color: $black-dark;
-    color: white;
-    @include clearfix;
-}
-
-.nav--primary, .nav--secondary, .logo { 
-    float: left;
-}
-
-.header__contact {
-    float: right;
-}
-
-.header__contact-item {
-    display: inline-block;
-    color: grey;
-    font-size: 1rem;
-    letter-spacing: 2px;
-    
-    &:not(:last-child) {
-        &::after {
-            content: '|';
-            padding: 0 .5rem;
+    &__contact {
+        float: right;
+        &-item {
+            display: inline-block;
+            color: grey;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            
+            &:not(:last-child) {
+                &::after {
+                    content: '|';
+                    padding: 0 .5rem;
+                }
+            }
         }
     }
+
+    .nav--secondary, .logo { 
+        float: left;
+    }
+
+    .nav--primary {
+        float: right;
+    }
+    
+    &__main {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        @include clearfix;
+    }
 }
-
-.header__main {
-    padding: 2rem $container-padding-left-right;
-    @include clearfix;
-}
-
-
 
 
 //TABLET & MOBILE
 @media only screen and 
 (min-width: 0) and 
 (max-width: $tablet-breakpoint-end) {
-   .nav--primary, .logo {
-       float:none;
-   }
 
-   .header__main {
-       text-align: center;
-   }
+    .header {
+        .nav--primary, .logo {
+            float:none;
+        }
+
+        &__main {
+            text-align: center;
+        }
+    }
+
 }
 
 //MOBILE
 @media only screen and 
 (min-width: 0) and 
 (max-width: $mobile-breakpoint-end) {
-    .nav--secondary, .header__contact {
-        float: none;
-        text-align: center;
+    .header {
+        .nav--secondary, .header__contact {
+            float: none;
+            text-align: center;
+        }
     }
 }
 

@@ -1,4 +1,5 @@
-$container-padding-left-right: 10%;
+$container-padding-left-right-default: 10%;
+$container-padding-left-right-small: 5%;
 
 //FONT
 $font-size-standard-text: 1.2rem;
@@ -11,6 +12,6 @@ $black-dark: black;
 $black-light: #222121;
 
 // BREAKPOINTS
-$mobile-breakpoint-end: 480px;
-$tablet-breakpoint-start: 481px;
+$mobile-breakpoint-end: 539px;
+$tablet-breakpoint-start: 540px;
 $tablet-breakpoint-end: 1024px;

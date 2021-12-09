@@ -6,10 +6,11 @@
     padding: 1rem;
     border-left: 5px solid orange;
     border-radius: 15px;
-}
 
-.logo__sub {
-    color: orange;
-    font-size: 2rem;
-    letter-spacing: 6px;
+    &__sub {
+        color: orange;
+        font-size: 2rem;
+        letter-spacing: 6px;
+    }
+
 }

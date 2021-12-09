@@ -1,0 +1,15 @@
+@use '../abstract/variable' as *;
+
+.general-container {
+    padding-left: $container-padding-left-right-default;
+    padding-right: $container-padding-left-right-default;
+}
+
+@media only screen and
+(min-width: 0) and
+(max-width: $tablet-breakpoint-end) {
+    .general-container {
+        padding-left: $container-padding-left-right-small;
+        padding-right: $container-padding-left-right-small;
+    }
+}

@@ -1,79 +1,82 @@
 @use '../abstract/variable' as *;
 
-.about-box {
-    float: left;
-    width: 30%;
-    background-color: white;
-    text-align: center;
-    border-radius: 3px;
-    overflow: hidden;
+.about {
+    &-box {
+        float: left;
+        width: 30%;
+        background-color: white;
+        text-align: center;
+        border-radius: 3px;
+        overflow: hidden;
+    
+        &:not(:last-child) {
+            margin-right: 5%;
+        }
+    }
 
-    &:not(:last-child) {
-        margin-right: 5%;
+    &__title {
+        padding: 3rem 0;
+        background-color: #f7f7f7;
+    }
+    
+    &__text {
+        line-height: 2;
+        padding: 3rem;
     }
 }
-
-.about__title {
-    padding: 3rem 0;
-    background-color: #f7f7f7;
-}
-
-.about__text {
-    line-height: 2;
-    padding: 3rem;
-}
-
-
 
 //TABLETS
 @media only screen and 
 (min-width: $tablet-breakpoint-start) and 
 (max-width: $tablet-breakpoint-end) {
-    
-    .about-box:nth-child(odd) {
-        width: 45%;
-        margin-right: 10%;
-    }
-    .about-box:nth-child(even) {
-        width: 45%;
-        margin-right: 0;
-    }
+    .about {
+        &-box {
+            &:nth-child(odd) {
+                width: 47%;
+                margin-right: 6%;
+            }
+            &:nth-child(even) {
+                width: 47%;
+                margin-right: 0;
+            }
+            //remove this style if the no.of.containers/cards are even
+            &:last-child {
+                float: none;
+                clear: both;
+                width: 80%;
+                margin: 0 auto;
+                transform: translateY(3rem);
+            }
+        }
 
-    //remove this style if the no.of.containers/cards are even
-    .about-box:last-child {
-        float: none;
-        clear: both;
-        width: 80%;
-        margin: 0 auto;
-        transform: translateY(3rem);
+        &__text {
+            padding: 1rem;
+        }
+        
+        &__title {
+            padding: 1.5rem 0;
+        }
     }
-
-    .about__text {
-        padding: 1rem;
-    }
-    
-    .about__title {
-        padding: 1.5rem 0;
-    }
-
 }
 
 //MOBILE
 @media only screen and 
 (min-width: 0) and 
 (max-width: $mobile-breakpoint-end) {
-    .about-box {
-        width: 100%;
-        &:not(:first-child) {
-            margin-top: 2rem;
+    .about {
+        &-box {
+            width: 100%;
+            &:not(:first-child) {
+                margin-top: 2rem;
+            }
         }
-    }
-    
-    .about__text {
-        padding: 1rem;
-    }
-    
-    .about__title {
-        padding: 1.5rem 0;
-    }
+
+        &__text {
+            padding: 1rem;
+        }
+
+        &__title {
+            padding: 1.5rem 0;
+        }
+    } 
 }

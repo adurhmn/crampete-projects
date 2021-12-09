@@ -2,7 +2,8 @@
 @use '../abstract/mixin' as *;
 
 .section-products {
-    padding: 4rem $container-padding-left-right;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     background-color: lightgrey;
     @include clearfix;
 }

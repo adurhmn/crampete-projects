@@ -1,46 +1,36 @@
 @use '../abstract/variable' as *;
 
 
-nav {
+.nav {
     letter-spacing: 1px;
-}
-
-.nav__item--secondary {
-    color: grey;
-    font-size: 1rem;
-    white-space: nowrap;
     
-    &:not(:last-child)::after {
-        content: '|';
-        padding: 0 .5rem;
+    &--primary {
+        float: right;
     }
-}
 
-.nav--primary {
-    float: right;
-}
-
-.nav__item--primary {
-    display: inline-block;
-    padding: 1.5rem 1rem;
-    color: black;
-    font-size: 1.4rem;
-
-    &:hover {
-        background-color: rgba(green, .7);
-        color: white;
+    &__item--primary {
+        display: inline-block;
+        padding: 1.5rem 1rem;
+        color: black;
+        font-size: 1.4rem;
+        &:hover {
+            background-color: rgba(green, .7);
+            color: white;
+        }
     }
-}
 
-.nav__item--tertiary {
-    color: green;
-    padding-bottom: 1.7rem;
-}
-
-
-//TABLET & MOBILE
-@media only screen and 
-(min-width: 0) and 
-(max-width: $tablet-breakpoint-end) {
-   
+    &__item--secondary {
+        color: grey;
+        font-size: 1rem;
+        white-space: nowrap;
+        &:not(:last-child)::after {
+            content: '|';
+            padding: 0 .5rem;
+        }
+    }
+    
+    &__item--tertiary {
+        color: green;
+        padding-bottom: 1.7rem;
+    }
 }

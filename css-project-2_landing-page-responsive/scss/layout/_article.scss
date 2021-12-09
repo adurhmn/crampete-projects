@@ -2,7 +2,8 @@
 @use '../abstract/mixin' as *;
 
 .section-article {
-    padding: 5rem $container-padding-left-right;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     @include clearfix;
 }
 
