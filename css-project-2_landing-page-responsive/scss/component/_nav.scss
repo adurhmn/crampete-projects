@@ -5,13 +5,10 @@ nav {
     letter-spacing: 1px;
 }
 
-.nav--secondary {
-    float: left;
-}
-
 .nav__item--secondary {
     color: grey;
     font-size: 1rem;
+    white-space: nowrap;
     
     &:not(:last-child)::after {
         content: '|';
@@ -35,7 +32,15 @@ nav {
     }
 }
 
-.nav-active {
-    background-color: green;
-    color: white;
+.nav__item--tertiary {
+    color: green;
+    padding-bottom: 1.7rem;
+}
+
+
+//TABLET & MOBILE
+@media only screen and 
+(min-width: 0) and 
+(max-width: $tablet-breakpoint-end) {
+   
 }

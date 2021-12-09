@@ -8,7 +8,16 @@ html {
 .heading--primary {
     font-size: $font-size-standard-heading;
     text-transform: uppercase;
-    text-align: center;
+}
+
+.heading--secondary {
+    font-size: $font-size-secondary-heading;
+    text-transform: uppercase;
+}
+
+.heading--tertiary {
+    font-size: $font-size-tertiary-heading;
+    text-transform: uppercase;
 }
 
 p, a {

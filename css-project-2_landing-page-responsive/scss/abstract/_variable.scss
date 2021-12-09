@@ -1,9 +1,16 @@
-$container-padding-left-right: 20rem;
+$container-padding-left-right: 10%;
 
 //FONT
 $font-size-standard-text: 1.2rem;
 $font-size-standard-heading: 2.4rem;
+$font-size-secondary-heading: 2rem;
+$font-size-tertiary-heading: 1.5rem;
 
 //COLOR
-$black-dark: #212020;
-$black-light: #383636;
+$black-dark: black;
+$black-light: #222121;
+
+// BREAKPOINTS
+$mobile-breakpoint-end: 480px;
+$tablet-breakpoint-start: 481px;
+$tablet-breakpoint-end: 1024px;

@@ -1,0 +1,8 @@
+@use '../abstract/variable' as *;
+@use '../abstract/mixin' as *;
+
+.section-products {
+    padding: 4rem $container-padding-left-right;
+    background-color: lightgrey;
+    @include clearfix;
+}

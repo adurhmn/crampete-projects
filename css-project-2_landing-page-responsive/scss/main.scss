@@ -1,13 +1,18 @@
 @use 'base/reset' as *;
 @use 'base/typography' as *;
-@use 'base/helper' as *;
 
 @use 'component/nav' as *;
+@use 'component/button' as *;
 @use 'component/address-widget' as *;
 @use 'component/logo' as *;
 @use 'component/about-box' as *;
 @use 'component/article-box' as *;
+@use 'component/products-card' as *;
 
 @use 'layout/header' as *;
 @use 'layout/about' as *;
 @use 'layout/article' as *;
+@use 'layout/products' as *;
+@use 'layout/footer' as *;
+
+@use 'base/helper' as *;

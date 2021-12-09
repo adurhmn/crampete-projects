@@ -11,7 +11,57 @@
     @include clearfix;
 }
 
+.nav--primary, .nav--secondary, .logo { 
+    float: left;
+}
+
+.header__contact {
+    float: right;
+}
+
+.header__contact-item {
+    display: inline-block;
+    color: grey;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    
+    &:not(:last-child) {
+        &::after {
+            content: '|';
+            padding: 0 .5rem;
+        }
+    }
+}
+
 .header__main {
-    padding: 1rem $container-padding-left-right;
+    padding: 2rem $container-padding-left-right;
     @include clearfix;
 }
+
+
+
+
+//TABLET & MOBILE
+@media only screen and 
+(min-width: 0) and 
+(max-width: $tablet-breakpoint-end) {
+   .nav--primary, .logo {
+       float:none;
+   }
+
+   .header__main {
+       text-align: center;
+   }
+}
+
+//MOBILE
+@media only screen and 
+(min-width: 0) and 
+(max-width: $mobile-breakpoint-end) {
+    .nav--secondary, .header__contact {
+        float: none;
+        text-align: center;
+    }
+}
+
+

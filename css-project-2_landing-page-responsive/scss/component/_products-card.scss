@@ -1,0 +1,61 @@
+@use '../abstract/variable' as *;
+@use '../abstract/mixin' as *;
+
+.products__card {
+    height: 20%;
+    width: 47%;
+    position: relative;
+    float: left;
+    @include clearfix;
+    &:not(:last-child) {
+        margin-right: 6%;
+    }
+    &--1 {background-color: orange;}
+    &--2 {background-color: lightseagreen}
+}
+
+.products__img {
+    height: 100%;
+    width: 30%;
+    float: left;
+    object-fit: cover;
+    object-position: center;
+}
+
+.products__text-box {
+    width: 70%;
+    padding: 1rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+//TABLETS & MOBILE
+@media only screen and 
+(min-width: 0) and 
+(max-width: $tablet-breakpoint-end) {
+    .products__card {
+        float: none;
+        width: 70%;
+
+        //To override with required selector specificity
+        &:nth-child(n) {
+            margin: 0 auto 0 auto;
+        }
+        &:last-child {
+            margin-top: 2rem;
+        }
+    }
+}
+
+//MOBILE 
+@media only screen and 
+(min-width: 0) and 
+(max-width: $mobile-breakpoint-end) {
+    .products__card {
+        width: 100%;
+        height: 35%;
+    }
+}
