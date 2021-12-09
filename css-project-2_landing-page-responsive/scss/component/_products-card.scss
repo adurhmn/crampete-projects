@@ -8,6 +8,7 @@
         position: relative;
         float: left;
         @include clearfix;
+        overflow: hidden;
         &:not(:last-child) {
             margin-right: 6%;
         }
