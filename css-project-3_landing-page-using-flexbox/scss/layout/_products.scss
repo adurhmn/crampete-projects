@@ -1,0 +1,18 @@
+@use '../abstract/variable' as *;
+
+.section-products {
+    padding: 5rem $container-side-padding-desktop;
+}
+
+.products__heading {
+    background-color: $theme-color;
+    padding: 1rem 0;
+    color: $txt-col-primary;
+}
+
+.products__card-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: $product-card-gutter-horizontal 0;
+}

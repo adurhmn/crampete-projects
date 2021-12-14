@@ -1,0 +1,34 @@
+@use '../abstract/variable' as *;
+
+.search-bar {
+    display: inline-block;
+    height: 4rem;
+    border: 1px solid $theme-color;
+    white-space: nowrap;
+
+    &__input {
+        height: 100%;
+        padding: 1rem;
+        font-family: inherit;
+        color: inherit;
+        border: none;
+        border-radius: 0;      
+        width: 26rem;  
+
+        &::placeholder {
+            color: $theme-color;
+        }
+    }
+
+    &__btn {
+        height: 100%;
+        width: 4rem;
+        border: none;
+        border-radius: 0;  
+        vertical-align: top;     
+        font-size: 1.8rem; 
+        color: white;
+        background-color: $theme-color;
+
+    }
+}

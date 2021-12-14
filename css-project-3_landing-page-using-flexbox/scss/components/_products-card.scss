@@ -1,0 +1,22 @@
+@use '../abstract/variable' as *;
+
+.products {
+
+    &__card {
+        width: calc((100% - (2*$product-card-gutter-vertical * 4)) / 4);
+        margin: $product-card-gutter-horizontal $product-card-gutter-vertical;
+
+        &-heading {
+            text-align: center;
+            color: $theme-color;
+        }
+
+        &-img {
+            width: 100%;
+            height: 30rem;
+        }
+    }
+
+
+
+}

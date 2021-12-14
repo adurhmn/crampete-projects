@@ -1,0 +1,60 @@
+@use '../abstract/variable' as *;
+
+.footer {
+    padding: 10rem $container-side-padding-desktop;
+    display: flex;
+    gap: $footer-gutter;
+    color: $theme-color;
+    font-size: $primary-body-text;
+    
+    &__item {
+        width: calc((100% - 3*$footer-gutter) / 4);
+    }
+
+    &__heading {
+        margin-bottom: 1.8rem;
+    }
+
+    &__grand-item {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    &__media {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &-item {
+            width: 3rem;
+            height: 3rem;
+            position: relative;
+            font-size: 1.8rem;
+            display: inline-block;
+            border: 2px solid $theme-color;
+            border-radius: 50%;
+    
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    &__message {
+        &-text {
+            font-size: $primary-body-text;
+            margin-top: 3rem;
+        }
+    }
+
+    &__payment {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 5rem;
+        gap: 2rem;
+    }
+}
+

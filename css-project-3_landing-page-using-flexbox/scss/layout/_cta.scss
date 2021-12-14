@@ -1,0 +1,35 @@
+@use '../abstract/variable' as *;
+
+.section-cta {
+    padding: 2rem $container-side-padding-desktop 6rem $container-side-padding-desktop;
+    background-image: linear-gradient(rgba($color: $theme-color, $alpha: .7) 0%, 
+                                      rgba($color: $theme-color, $alpha: .7) 100%), 
+                       url('../assets/img/product.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.cta__content {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.cta__heading {
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem 0;
+    color: $txt-col-primary;
+}
+
+.cta__btn {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    width: 48%;
+    color: $theme-color;
+    background-color: $txt-col-primary;
+    
+    &:last-child {
+        float: right;
+    }
+}

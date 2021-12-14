@@ -1,0 +1,25 @@
+@use '../abstract/variable' as *;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgb(104, 104, 104);
+}
+
+.primary-heading {
+    font-size: $primary-heading;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: initial;
+    letter-spacing: 1px;
+}
+
+.secondary-heading {
+    font-size: $secondary-heading;
+    text-transform: uppercase;
+}
