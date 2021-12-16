@@ -423,6 +423,7 @@ body {
 .footer {
   padding: 10rem 10%;
   display: flex;
+  flex-wrap: wrap;
   gap: 5rem;
   color: #1aace6;
   font-size: 1.3rem;
@@ -468,6 +469,16 @@ body {
   gap: 2rem;
 }
 
+@media only screen and (min-width: 540px) and (max-width: 1024px) {
+  .footer__item {
+    width: calc((100% - 5rem) / 2);
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 539px) {
+  .footer__item {
+    width: 80%;
+  }
+}
 .mgn-top-vsmall {
   margin-top: 1rem;
 }

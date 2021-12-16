@@ -3,6 +3,7 @@
 .footer {
     padding: 10rem $container-side-padding-desktop;
     display: flex;
+    flex-wrap: wrap;
     gap: $footer-gutter;
     color: $theme-color;
     font-size: $primary-body-text;
@@ -61,12 +62,24 @@
 
 //TABLETS & MOBILE 
 @media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
+    .footer {
+    }
 }
 
 //TABLETS
 @media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+    .footer {
+        &__item {
+            width: calc((100% - 1*$footer-gutter) / 2);
+        }
+    }
 }
 
 //MOBILE
 @media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    .footer {
+        &__item {
+            width: 80%;
+        }
+    }
 }
