@@ -1,33 +1,32 @@
 @use '../abstract/variable' as *;
 
 .section-about {
-    padding: 3rem $container-side-padding-desktop;
-    // background-color: rgba($color: $theme-color, $alpha: 1);
+    padding: 3rem $container-side-padding-big;
     background-color: rgb(231, 230, 230);
 }
 
-.about__video {
-    width: 100%;
-    height: 50rem;
-    object-fit: cover;
-    object-position: top center;
-}
+.about {
+    &__video {
+        width: 100%;
+        height: 50rem;
+        object-fit: cover;
+        object-position: top center;
+        margin-bottom: 3rem;
 
-.about__card-box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    }
+
+    &__card-box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
 
 //TABLETS & MOBILE 
 @media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
     .section-about {
-        padding: 3rem $container-side-padding-mobile;
-    }
-
-    .about__video {
-        margin-bottom: 3rem;
+        padding: 3rem $container-side-padding-small;
     }
 }
 

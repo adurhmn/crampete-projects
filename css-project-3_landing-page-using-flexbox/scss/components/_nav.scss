@@ -7,12 +7,14 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        padding: 1.5rem $container-side-padding-big;
+        background-color: $theme-color;
     }
     
     &__item--primary {
         color: $txt-col-primary;
         font-size: 1.5rem;
-        margin: 0 3rem;
+        margin: 1rem 3rem;
     }
 
     &--secondary {
@@ -39,9 +41,19 @@
 //TABLETS & MOBILE 
 @media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
     .nav {
+
+        &--primary {
+            padding: 1.5rem $container-side-padding-small;
+        }
+
         &__item--primary {
-            margin: .5rem 2rem;
+            margin: 1rem 2rem;
         } 
+
+            
+        &__item--secondary {
+            padding: 1.5rem;
+        }
     } 
 }
 
@@ -51,10 +63,6 @@
         &--secondary {
             width: 30%;
         }
-    
-        &__item--secondary {
-            padding: 1.5rem 2rem;
-        }
     }
 }
 
@@ -63,10 +71,6 @@
     .nav {
         &--secondary {
             width: 40%;
-        }
-    
-        &__item--secondary {
-            padding: 1.5rem;
         }
     }
 }

@@ -1,7 +1,7 @@
 @use '../abstract/variable' as *;
 
 .footer {
-    padding: 10rem $container-side-padding-desktop;
+    padding: 10rem $container-side-padding-big;
     display: flex;
     flex-wrap: wrap;
     gap: $footer-gutter;
@@ -56,13 +56,6 @@
         flex-wrap: wrap;
         font-size: 5rem;
         gap: 2rem;
-    }
-}
-
-
-//TABLETS & MOBILE 
-@media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
-    .footer {
     }
 }
 

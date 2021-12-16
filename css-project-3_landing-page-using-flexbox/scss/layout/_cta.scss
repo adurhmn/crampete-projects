@@ -1,10 +1,10 @@
 @use '../abstract/variable' as *;
 
 .section-cta {
-    padding: 2rem $container-side-padding-desktop 6rem $container-side-padding-desktop;
-    background-image: linear-gradient(rgba($color: $theme-color, $alpha: .7) 0%, 
-                                      rgba($color: $theme-color, $alpha: .7) 100%), 
-                       url('../assets/img/product.jpg');
+    padding: 2rem $container-side-padding-big 6rem $container-side-padding-big;
+    background-image: linear-gradient(rgba($color: $theme-color, $alpha: .8) 0%, 
+                                      rgba($color: $theme-color, $alpha: .8) 100%), 
+                       url('../assets/img/cta.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -36,7 +36,7 @@
 //TABLETS & MOBILE 
 @media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
     .section-cta {
-        padding: 2rem $container-side-padding-mobile 6rem $container-side-padding-mobile;
+        padding: 2rem $container-side-padding-small 6rem $container-side-padding-small;
     }
 }
 
@@ -54,7 +54,7 @@
     }
 
     .cta__btn {
-        height: 7rem;
+        height: 5rem;
         position: relative;
 
         span {

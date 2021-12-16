@@ -4,7 +4,7 @@
     color: $txt-col-primary;
 
     &__sub {
-        padding: .5rem $container-side-padding-desktop;
+        padding: .5rem $container-side-padding-big;
         background-color: $theme-color;
         display: flex;
         justify-content: space-between;
@@ -44,16 +44,11 @@
 
 
     &__main {
-        padding: 1.5rem $container-side-padding-desktop;
+        padding: 1.5rem $container-side-padding-big;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-    }
-
-    &__nav {
-        padding: 1.5rem $container-side-padding-desktop;
-        background-color: $theme-color;
     }
 }
 
@@ -65,10 +60,6 @@
             padding-bottom: 3rem;
             flex-direction: column;
             gap: 3rem;
-        }
-
-        &__nav {
-            padding: 1.5rem $container-side-padding-mobile;
         }
     }
 }
