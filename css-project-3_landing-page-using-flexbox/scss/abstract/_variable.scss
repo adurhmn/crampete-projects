@@ -1,5 +1,6 @@
 //BOX-SIZING
 $container-side-padding-desktop: 10%;
+$container-side-padding-mobile: 1rem;
 $product-card-gutter-vertical: 3rem;
 $product-card-gutter-horizontal: 1rem;
 $footer-gutter: 5rem;
@@ -13,3 +14,8 @@ $txt-col-secondary: $theme-color;
 $primary-heading: 2.5rem;
 $secondary-heading: 1.6rem;
 $primary-body-text: 1.3rem;
+
+// BREAKPOINTS
+$mobile-breakpoint-end: 539px;
+$tablet-breakpoint-start: 540px;
+$tablet-breakpoint-end: 1024px;

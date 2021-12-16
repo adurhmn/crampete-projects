@@ -27,7 +27,45 @@
     &__body-text {
         color: white;
         font-size: $primary-body-text;
-        width: 40%;
+        width: 50%;
         padding: 5%;
+    }
+}
+
+
+//TABLETS & MOBILE 
+@media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
+    .section-services {
+        padding: 10rem $container-side-padding-mobile;
+    }
+}
+
+//TABLETS
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+    .services {
+        &__content {
+            width: 70%;
+            background-image: linear-gradient(to right, rgba(black, .6) 0%, rgba(black, .6) 60%, transparent 60%), url('../assets/img/product.jpg');
+        }
+
+        &__body-text {
+            width: 60%;
+            padding: 5%;
+        }
+    }
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    .services {
+        &__content {
+            width: 60%;
+            background-image: linear-gradient(to right, rgba(black, .6) 0%, rgba(black, .6) 100%), url('../assets/img/product.jpg');
+        }
+
+        &__body-text {
+            width: 100%;
+            padding: 10%;
+        }
     }
 }

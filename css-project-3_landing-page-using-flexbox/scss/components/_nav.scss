@@ -4,13 +4,15 @@
 
     &--primary {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
     }
     
     &__item--primary {
         color: $txt-col-primary;
         font-size: 1.5rem;
+        margin: 0 3rem;
     }
 
     &--secondary {
@@ -30,5 +32,41 @@
     &__active {
         color: $txt-col-primary;
         background-color: $theme-color;
+    }
+}
+
+
+//TABLETS & MOBILE 
+@media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
+    .nav {
+        &__item--primary {
+            margin: .5rem 2rem;
+        } 
+    } 
+}
+
+//TABLETS
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+    .nav {
+        &--secondary {
+            width: 30%;
+        }
+    
+        &__item--secondary {
+            padding: 1.5rem 2rem;
+        }
+    }
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    .nav {
+        &--secondary {
+            width: 40%;
+        }
+    
+        &__item--secondary {
+            padding: 1.5rem;
+        }
     }
 }

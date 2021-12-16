@@ -16,3 +16,19 @@
     flex-wrap: wrap;
     padding: $product-card-gutter-horizontal 0;
 }
+
+
+//TABLETS & MOBILE 
+@media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
+    .section-products {
+        padding: 5rem $container-side-padding-mobile;
+    }
+}
+
+//TABLETS
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+}

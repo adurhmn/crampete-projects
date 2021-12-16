@@ -27,3 +27,22 @@
     font-size: $primary-body-text;
 }
 
+//TABLETS & MOBILE 
+@media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
+}
+
+//TABLETS
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+    .about__card {
+        width: calc(100%/2 - 5%);
+        margin: 2.5%;
+    }
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    .about__card {
+        width: 80%;
+        margin: 1rem auto;
+    }
+}

@@ -2,8 +2,8 @@
 
 .section-about {
     padding: 3rem $container-side-padding-desktop;
-    background-color: rgba($color: $theme-color, $alpha: 1);
-    // background-color: rgb(231, 230, 230);
+    // background-color: rgba($color: $theme-color, $alpha: 1);
+    background-color: rgb(231, 230, 230);
 }
 
 .about__video {
@@ -16,4 +16,31 @@
 .about__card-box {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+//TABLETS & MOBILE 
+@media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
+    .section-about {
+        padding: 3rem $container-side-padding-mobile;
+    }
+
+    .about__video {
+        margin-bottom: 3rem;
+    }
+}
+
+//TABLETS
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+    .about__video {
+        height: 40rem;
+    }
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    .about__video {
+        height: 30rem;
+    }
 }

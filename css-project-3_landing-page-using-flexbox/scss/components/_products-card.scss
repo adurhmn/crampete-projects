@@ -16,7 +16,31 @@
             height: 30rem;
         }
     }
+}
 
 
+//TABLETS & MOBILE 
+@media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
 
+}
+
+//TABLETS
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+    .products {
+        &__card {
+            width: calc((100% - (2*5rem * 2)) / 2);
+            margin-left: 5rem;
+            margin-right: 5rem;
+        }
+    }
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    .products {
+        &__card {
+            width: 75%;
+            margin: 1rem auto;
+        }
+    }
 }

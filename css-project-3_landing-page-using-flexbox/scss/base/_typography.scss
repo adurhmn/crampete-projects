@@ -23,3 +23,17 @@ body {
     font-size: $secondary-heading;
     text-transform: uppercase;
 }
+
+//MOBILE & TABLETS
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+    html {
+        font-size: 58%;
+    }
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    html {
+        font-size: 54%;
+    }
+}

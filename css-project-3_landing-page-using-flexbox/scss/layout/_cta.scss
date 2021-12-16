@@ -15,8 +15,6 @@
 }
 
 .cta__heading {
-    width: 80%;
-    margin: 0 auto;
     padding: 3rem 0;
     color: $txt-col-primary;
 }
@@ -31,5 +29,40 @@
     
     &:last-child {
         float: right;
+    }
+}
+
+
+//TABLETS & MOBILE 
+@media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
+    .section-cta {
+        padding: 2rem $container-side-padding-mobile 6rem $container-side-padding-mobile;
+    }
+}
+
+//TABLETS
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+    .cta__content {
+        width: 80%;
+    }
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    .cta__content {
+        width: 90%;
+    }
+
+    .cta__btn {
+        height: 7rem;
+        position: relative;
+
+        span {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 }

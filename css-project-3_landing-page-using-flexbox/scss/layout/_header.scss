@@ -9,6 +9,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         font-size: 1.3rem;
     }
 
@@ -47,10 +48,43 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     &__nav {
         padding: 1.5rem $container-side-padding-desktop;
         background-color: $theme-color;
+    }
+}
+
+//TABLETS & MOBILE 
+@media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
+    .header {
+        &__main {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        &__nav {
+            padding: 1.5rem $container-side-padding-mobile;
+        }
+    }
+}
+
+//TABLETS
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    .header {
+        display: flex;
+        flex-direction: column-reverse;
+
+        &__sub {
+            display: none;
+        }
     }
 }
