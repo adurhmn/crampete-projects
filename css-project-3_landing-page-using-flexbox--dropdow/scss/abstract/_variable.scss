@@ -1,0 +1,21 @@
+//BOX-SIZING
+$container-side-padding-big: 10%;
+$container-side-padding-small: 1.5rem;
+$product-card-gutter-vertical: 3rem;
+$product-card-gutter-horizontal: 1rem;
+$footer-gutter: 5rem;
+
+//COLOR
+$theme-color: rgb(26, 172, 230);
+$txt-col-primary: white;
+$txt-col-secondary: $theme-color;
+
+//FONT
+$primary-heading: 2.5rem;
+$secondary-heading: 1.6rem;
+$primary-body-text: 1.3rem;
+
+// BREAKPOINTS
+$mobile-breakpoint-end: 539px;
+$tablet-breakpoint-start: 540px;
+$tablet-breakpoint-end: 1024px;

@@ -1,0 +1,28 @@
+@use '../abstract/variable' as *;
+
+.section-products {
+    padding: 5rem $container-side-padding-big;
+}
+
+.products {
+    &__heading {
+        background-color: $theme-color;
+        padding: 1rem 0;
+        color: $txt-col-primary;
+    }
+
+    &__card-box {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: $product-card-gutter-horizontal 0;
+    }
+}
+
+
+//TABLETS & MOBILE 
+@media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
+    .section-products {
+        padding: 5rem $container-side-padding-small;
+    }
+}

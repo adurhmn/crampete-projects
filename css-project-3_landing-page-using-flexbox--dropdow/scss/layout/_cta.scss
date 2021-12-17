@@ -1,0 +1,68 @@
+@use '../abstract/variable' as *;
+
+.section-cta {
+    padding: 2rem $container-side-padding-big 6rem $container-side-padding-big;
+    background-image: linear-gradient(rgba($color: $theme-color, $alpha: .8) 0%, 
+                                      rgba($color: $theme-color, $alpha: .8) 100%), 
+                       url('../assets/img/cta.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.cta__content {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.cta__heading {
+    padding: 3rem 0;
+    color: $txt-col-primary;
+}
+
+.cta__btn {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    width: 48%;
+    color: $theme-color;
+    background-color: $txt-col-primary;
+    
+    &:last-child {
+        float: right;
+    }
+}
+
+
+//TABLETS & MOBILE 
+@media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
+    .section-cta {
+        padding: 2rem $container-side-padding-small 6rem $container-side-padding-small;
+    }
+}
+
+//TABLETS
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+    .cta__content {
+        width: 80%;
+    }
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    .cta__content {
+        width: 90%;
+    }
+
+    .cta__btn {
+        height: 5rem;
+        position: relative;
+
+        span {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

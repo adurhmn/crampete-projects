@@ -1,0 +1,224 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Project 3 | Flex-Box</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__sub">
+            <div class="header__contact">
+                <span class="header__contact-item"><i class="fa fa-envelope"></i>  sales@iceclean.ie</span>
+                <span class="header__contact-item"><i class="fa fa-phone"></i>  +91 9835835274</span>
+            </div>
+            <div class="header__media">
+                <a href="#" class="header__media-item"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="header__media-item"><i class="fa fa-linkedin"></i></a>
+                <a href="#" class="header__media-item"><i class="fa fa-youtube"></i></a>
+                <a href="#" class="header__media-item"><i class="fa fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="header__main">
+            <img src="assets/img/logo-primary.png" alt="Iceclean Logo" class="header__logo">
+            <div class="search-bar">
+                <input type="text" class="search-bar__input" placeholder="Search">
+                <button class="search-bar__btn"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        <div class="header__nav">
+            <div class="nav--hamburger hamburger">
+                <span class="hamburger__top mgn-bottom-small"></span>
+                <span class="hamburger__middle mgn-bottom-small"></span>
+                <span class="hamburger__bottom"></span>
+            </div>
+            <nav class="nav--primary">
+                <a href="#" class="nav__item nav__item--primary">PRODUCTS</a>
+                <a href="#" class="nav__item nav__item--primary">INDUSTRY SECTORS</a>
+                <a href="#" class="nav__item nav__item--primary">SPARE PARTS</a>
+                <a href="#" class="nav__item nav__item--primary">CLEANING SUPPLIES</a>
+                <a href="#" class="nav__item nav__item--primary">FAQS</a>
+                <a href="#" class="nav__item nav__item--primary">ABOUT</a>
+                <a href="#" class="nav__item nav__item--primary">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section-about">
+        <video class="about__video" controls>
+            <source src="assets/vid/video.mp4" type="video/mp4">
+            Sorry, <a href="assets/vid/video.mp4">video</a> is not supported in your browser.
+        </video>
+
+        <div class="about__card-box">
+            <div class="about__card">
+                <img src="assets/img/workplace-1.jpg" alt="company-workspace-image" class="about__card-img">
+                <h2 class="about__card-heading primary-heading">HIRE</h2>
+                <p class="about__card-body-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur sequi quibusdam laborum placeat quaerat officia recusandae explicabo dolor repudiandae quod!
+                </p>
+            </div>
+            <div class="about__card">
+                <img src="assets/img/workplace-2.jpg" alt="company-workspace-image" class="about__card-img">
+                <h2 class="about__card-heading primary-heading">SALES</h2>
+                <p class="about__card-body-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia recusandae explicabo dolor repudiandae quod!
+                </p>
+            </div>
+            <div class="about__card">
+                <img src="assets/img/workplace-3.jpg" alt="company-workspace-image" class="about__card-img">
+                <h2 class="about__card-heading primary-heading">SERVICES</h2>
+                <p class="about__card-body-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, excepturi. Consequatur sequi quibusdam laborum placeat quaerat officia recusandae explicabo dolor repudiandae quod!
+                </p>
+            </div>
+            <div class="about__card">
+                <img src="assets/img/workplace-4.jpg" alt="company-workspace-image" class="about__card-img">
+                <h2 class="about__card-heading primary-heading">SPARE PARTS</h2>
+                <p class="about__card-body-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur sequi quibusdam laborum placeat quaerat officia recusandae explicabo dolor repudiandae quod!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-products">
+        <h2 class="primary-heading products__heading mgn-bottom-medium">BEST SELLERS</h2>
+
+        <div class="products__card-box">
+            <div class="products__card">
+                <img src="assets/img/product.jpg" alt="iceclean-products-image" class="products__card-img">
+                <h3 class="products__card-heading secondary-heading">GENIE E</h3>
+            </div>
+            <div class="products__card">
+                <img src="assets/img/product.jpg" alt="iceclean-products-image" class="products__card-img">
+                <h3 class="products__card-heading secondary-heading">MAGNA</h3>
+            </div>
+            <div class="products__card">
+                <img src="assets/img/product.jpg" alt="iceclean-products-image" class="products__card-img">
+                <h3 class="products__card-heading secondary-heading">ORBIS ECO 400</h3>
+            </div>
+            <div class="products__card">
+                <img src="assets/img/product.jpg" alt="iceclean-products-image" class="products__card-img">
+                <h3 class="products__card-heading secondary-heading">MULTIWASHMW 340</h3>
+            </div>
+            <div class="products__card">
+                <img src="assets/img/product.jpg" alt="iceclean-products-image" class="products__card-img">
+                <h3 class="products__card-heading secondary-heading">FV9 BACK VAC 220V</h3>
+            </div>
+            <div class="products__card">
+                <img src="assets/img/product.jpg" alt="iceclean-products-image" class="products__card-img">
+                <h3 class="products__card-heading secondary-heading">LSU 375 WET VAC</h3>
+            </div>
+            <div class="products__card">
+                <img src="assets/img/product.jpg" alt="iceclean-products-image" class="products__card-img">
+                <h3 class="products__card-heading secondary-heading">STEAM AND VAC PRO</h3>
+            </div>
+            <div class="products__card">
+                <img src="assets/img/product.jpg" alt="iceclean-products-image" class="products__card-img">
+                <h3 class="products__card-heading secondary-heading">POLARIS 800</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-services">
+        <h2 class="primary-heading services__heading mgn-bottom-medium">SELECT YOUR INDUSTRY</h2>
+        <div class="services__container">
+            <nav class="nav--secondary">
+                <a href="#" class="nav__item nav__item--secondary nav__active">Healthcare</a>
+                <a href="#" class="nav__item nav__item--secondary">Bakery & Food Manufacturing</a>
+                <a href="#" class="nav__item nav__item--secondary">Construction</a>
+                <a href="#" class="nav__item nav__item--secondary">Education</a>
+                <a href="#" class="nav__item nav__item--secondary">Retail</a>
+                <a href="#" class="nav__item nav__item--secondary">Government & Local Authorities</a>
+                <a href="#" class="nav__item nav__item--secondary">Industry & Manufacturing</a>
+                <a href="#" class="nav__item nav__item--secondary">Warehouse & Distribution</a>
+                <a href="#" class="nav__item nav__item--secondary">Hoslitality</a>
+            </nav>
+            <div class="services__content">
+                <div class="services__body-text primary">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa corrupti illum architecto quod sunt sequi odio enim! Ab rem ratione recusandae accusantium officiis officia optio. <br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, facere ratione quaerat iste corporis distinctio. <br><br>
+
+                    <ul>
+                        <li>Safe and clean floors</li>
+                        <li>High quality environment</li>
+                        <li>Cost effective cleaning solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-cta">
+        <div class="cta__content">
+            <h2 class="primary-heading cta__heading">IRELAND'S LEADING CLEANING MACHINE COMPANY</h2>
+            <a href="#" class="cta__btn secondary-heading"><span>ABOUT ICECLEAN</span></a>
+            <a href="#" class="cta__btn secondary-heading"><span>ORDER MACHINE DEMO</span></a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__contact footer__item">
+            <h3 class="secondary-heading footer__heading">CONTACT US</h3>
+            <p class="footer__grand-item"><i class="fa fa-map-marker"></i>  ICE - Industrial Cleaning Equipment Unit 5 Western Business Park Oak Close, Dublin 12</p>
+            <p class="footer__grand-item"><i class="fa fa-phone"></i>  +91 9873689876</p>
+            <p class="footer__grand-item"><i class="fa fa-envelope"></i>  sales@iceclean.ie</p>
+            <div class="footer__connect mgn-top-medium">
+                <h3 class="secondary-heading footer__heading">CONNECT WITH US</h3>
+                <div class="footer__media">
+                    <a href="#" class="footer__media-item"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="footer__media-item"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" class="footer__media-item"><i class="fa fa-youtube"></i></a>
+                    <a href="#" class="footer__media-item"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="footer__support footer__item">
+            <h3 class="secondary-heading footer__heading">CUSTOMER SUPPORT</h3>
+            <a href="#" class="footer__grand-item">Orders and Returns</a>
+            <a href="#" class="footer__grand-item">Viewcart</a>
+            <a href="#" class="footer__grand-item">Login</a>
+            <a href="#" class="footer__grand-item">Sitemap</a>
+            <a href="#" class="footer__grand-item">Terms & Conditions</a>
+            <a href="#" class="footer__grand-item">Privacy Policy</a>
+            <a href="#" class="footer__grand-item">Cookies</a>
+
+        </div>
+       
+        <div class="footer__links footer__item">
+            <h3 class="secondary-heading footer__heading">OUR LINKS</h3>
+            <a href="#" class="footer__grand-item">Products</a>
+            <a href="#" class="footer__grand-item">Industry Sectors</a>
+            <a href="#" class="footer__grand-item">Spare Parts</a>
+            <a href="#" class="footer__grand-item">Cleaning Supplies</a>
+            <a href="#" class="footer__grand-item">FAQs</a>
+            <a href="#" class="footer__grand-item">About</a>
+            <a href="#" class="footer__grand-item">Contact</a>
+        </div>
+       
+        <div class="footer__message footer__item">
+            <img src="assets/img/logo-primary.png" alt="iceclean-logo" class="footer__logo">
+            <p class="footer__message-text">
+                Our team is here to help you save time and money, lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint cum accusantium, ut corporis facilis dolorum impedit! Cost-effective and customized cleaning solutions.
+            </p>
+            <h4 class="mgn-top-medium">Payments accepted through,</h4>
+            <div class="footer__payment">
+                <i class="fa fa-cc-visa"></i>
+                <i class="fa fa-cc-mastercard"></i>
+                <i class="fa fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

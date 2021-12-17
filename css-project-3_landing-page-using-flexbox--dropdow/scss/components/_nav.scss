@@ -1,0 +1,104 @@
+@use '../abstract/variable' as *;
+
+.nav {
+
+    &--primary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: $theme-color;
+        padding: 1rem $container-side-padding-small;
+        z-index: 5;
+        transition: .4s all ease;
+    }
+
+    &--secondary {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        background-color: white;
+    }
+
+    &--hamburger {
+        display: none;
+        width: 2.5rem;
+        .hamburger__top, .hamburger__middle, .hamburger__bottom {
+            display: inline-block;
+            width: 100%;
+            height: .4rem;
+            background-color: $txt-col-primary;
+        }
+    }
+
+    &__item {
+        &--primary {
+            color: $txt-col-primary;
+            font-size: 1.5rem;
+            margin: 1rem 3rem;
+        }
+        &--secondary {
+            padding: 1.5rem 3rem;
+            color: $txt-col-secondary;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+    }
+
+    &__active {
+        color: $txt-col-primary;
+        background-color: $theme-color;
+    }
+}
+
+
+//TABLETS & MOBILE 
+@media only screen and (min-width: 0) and (max-width: $tablet-breakpoint-end) {
+    .nav {
+
+        &__item--primary {
+            margin: 1rem 2rem;
+        } 
+            
+        &__item--secondary {
+            padding: 1.5rem;
+        }
+    } 
+}
+
+//TABLETS
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+    .nav {
+        &--secondary {
+            width: 30%;
+        }
+    }
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    .nav {
+
+        &--primary {
+            position: absolute;
+            top: -15rem;
+            right: 0;
+
+            &:focus, &:hover, :active {
+                top: 0;
+            }
+        }
+
+        &--secondary {
+            width: 40%;
+        }
+
+        &--hamburger {
+            display: inline-block;
+        }
+
+        &--hamburger:hover ~ &--primary, &--hamburger:focus ~ &--primary, &--hamburger:active ~ &--primary {
+            top: 4rem;
+        }
+    }
+}
