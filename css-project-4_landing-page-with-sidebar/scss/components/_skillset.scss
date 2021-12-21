@@ -9,10 +9,11 @@
         box-shadow: inset -3px -3px 10px rgba($color: $color-services, $alpha: .5), 0 3px 5px rgba($color: black, $alpha: .5);
 
         &-text {
+            padding: 2px 0;
             background-color: $color-services;
             border-top-left-radius: 1rem;
             border-bottom-left-radius: 1rem;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             text-align: center;
             
             &--1 {width: 90%;}
