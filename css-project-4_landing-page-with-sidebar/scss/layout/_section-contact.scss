@@ -30,7 +30,6 @@
         &--email {grid-area: email;}
         &--subject {grid-area: subject;}
         &--message {grid-area: message;}
-
     }
 
     &__input {
@@ -51,30 +50,24 @@
         &--message {
             height: 20rem;
         }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 5px 10px rgba(black, .2);
+        }
     }
-}
-
-
-//MOBILE & TABLET
-@media only screen and (max-width: $tablet-breakpoint-end) {
-
-}
-
-//TABLET
-@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
 }
 
 //MOBILE
 @media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
     .contact {
         &__form {
-            grid-template-columns: 47% 47%;
+            grid-template-columns: 48% 48%;
             grid-template-areas: 
                 "name_ email"
                 "subject subject"
                 "message message";
-            column-gap: 5%;
-            row-gap: 3rem;
+            column-gap: 4%;
         }
     }
 }

@@ -38,27 +38,6 @@
     }
 }
 
-
-//MOBILE & TABLET
-@media only screen and (max-width: $tablet-breakpoint-end) {
-
-}
-
-//TABLET
-@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
-    // .about {
-    //     &__card {
-    //         width: 32%;
-    //     }
-
-    //     &__content {
-    //         &--sub {
-    //             padding: 0 5%;
-    //         }
-    //     }
-    // }
-}
-
 //MOBILE
 @media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
     .portfolio {

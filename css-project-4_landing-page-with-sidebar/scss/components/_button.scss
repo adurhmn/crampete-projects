@@ -3,7 +3,6 @@
 .btn {
     display: inline-block;
     padding: .8rem 1.6rem;
-    text-transform: uppercase;
     font-weight: bold;
     color: white;
 
@@ -18,5 +17,10 @@
     &--contact {
         background-color: $color-contact;
         border-bottom: 3px solid darken($color-contact, 20%);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 5px 10px rgba(black, .4);
     }
 }

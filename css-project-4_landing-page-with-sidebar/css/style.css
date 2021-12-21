@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.7;
@@ -52,32 +52,45 @@ body {
   background-color: #4d5050;
   padding: 7vh 0;
   text-align: center;
-  z-index: 10;
 }
 .sidebar__nav-item {
   display: block;
+  font-size: 1.3rem;
   padding: 1.5rem 0;
   color: white;
-  font-size: 1.3rem;
   background-color: #3c3f3f;
   border-left: 5px solid;
   margin-bottom: 1px;
 }
 .sidebar__nav-item--home {
   border-left-color: #4f7bff;
+}
+.sidebar__nav-item--home:hover {
   color: #4f7bff;
 }
 .sidebar__nav-item--about {
   border-left-color: #ffb835;
 }
+.sidebar__nav-item--about:hover {
+  color: #ffb835;
+}
 .sidebar__nav-item--services {
   border-left-color: #982aff;
+}
+.sidebar__nav-item--services:hover {
+  color: #982aff;
 }
 .sidebar__nav-item--portfolio {
   border-left-color: #00a82a;
 }
+.sidebar__nav-item--portfolio:hover {
+  color: #00a82a;
+}
 .sidebar__nav-item--contact {
   border-left-color: #ff0088;
+}
+.sidebar__nav-item--contact:hover {
+  color: #ff0088;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -89,7 +102,6 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 1rem 0;
-    background-color: #3c3f3f;
   }
   .sidebar__nav {
     display: inline-block;
@@ -100,10 +112,10 @@ body {
     padding-right: 1rem;
     border-left: none;
     border-bottom: 5px solid;
+    background-color: #4d5050;
   }
   .sidebar__nav-item--home {
     border-bottom-color: #4f7bff;
-    color: #4f7bff;
   }
   .sidebar__nav-item--about {
     border-bottom-color: #ffb835;
@@ -121,6 +133,7 @@ body {
 @media only screen and (min-width: 0) and (max-width: 649px) {
   .sidebar {
     flex-direction: column;
+    padding: 2.5rem 0 0 0;
     gap: 3rem;
   }
 }
@@ -153,7 +166,6 @@ body {
 .btn {
   display: inline-block;
   padding: 0.8rem 1.6rem;
-  text-transform: uppercase;
   font-weight: bold;
   color: white;
 }
@@ -169,9 +181,13 @@ body {
   background-color: #ff0088;
   border-bottom: 3px solid #990052;
 }
+.btn:focus {
+  outline: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
 
 .skillset__skill {
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   width: 100%;
   color: white;
   box-shadow: inset -3px -3px 10px rgba(152, 42, 255, 0.5), 0 3px 5px rgba(0, 0, 0, 0.5);
@@ -180,6 +196,7 @@ body {
   background-color: #982aff;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
+  font-size: 1.1rem;
   text-align: center;
 }
 .skillset__skill-text--1 {
@@ -205,7 +222,7 @@ body {
   width: 80vw;
 }
 .contentbar__content {
-  padding: 10rem 10rem;
+  padding: 3rem 10rem;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -215,12 +232,12 @@ body {
     height: initial;
   }
   .contentbar__content {
-    padding: 10rem 2rem;
+    padding: 3rem 2rem;
   }
 }
 .header {
   height: 50rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url("../assets/img/hero.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%), url("../assets/img/hero.jpg");
   background-position: center;
   background-size: cover;
   color: white;
@@ -260,6 +277,16 @@ body {
 }
 .header__nav-item--checked {
   background-color: grey;
+}
+
+.welcome {
+  padding: 5rem 0;
+  text-align: center;
+}
+.welcome__heading {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #4f7bff;
 }
 
 .about {
@@ -363,8 +390,8 @@ body {
   background-color: #982aff;
   padding: 1.5rem 3rem;
   width: 28%;
-  display: flex;
   gap: 6%;
+  display: flex;
   align-items: center;
   color: white;
 }
@@ -514,18 +541,22 @@ body {
 .contact__input--message {
   height: 20rem;
 }
+.contact__input:focus {
+  outline: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
 
 @media only screen and (min-width: 0) and (max-width: 649px) {
   .contact__form {
-    grid-template-columns: 47% 47%;
+    grid-template-columns: 48% 48%;
     grid-template-areas: "name_ email" "subject subject" "message message";
-    column-gap: 5%;
-    row-gap: 3rem;
+    column-gap: 4%;
   }
 }
 .footer {
   background-color: #3c3f3f;
   padding: 4rem 0;
+  color: white;
 }
 .footer__media-box {
   display: flex;
@@ -536,11 +567,9 @@ body {
   font-size: 1.5rem;
   padding: 1rem;
   background-color: #4d5050;
-  color: white;
 }
 .footer__copyright {
   text-align: center;
-  color: white;
   font-size: 1.1rem;
 }
 

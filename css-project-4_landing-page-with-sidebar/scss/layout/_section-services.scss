@@ -26,8 +26,8 @@
         background-color: $color-services;
         padding: 1.5rem 3rem;
         width: 28%;
-        display: flex;
         gap: 6%;
+        display: flex;
         align-items: center;
         color: $color-txt-white;
 
@@ -82,11 +82,6 @@
             }
         }
     }
-}
-
-//TABLET
-@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
-
 }
 
 //MOBILE

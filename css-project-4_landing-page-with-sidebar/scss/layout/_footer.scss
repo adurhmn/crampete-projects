@@ -3,6 +3,7 @@
 .footer {
     background-color: $color-dark-black;
     padding: 4rem 0;
+    color: $color-txt-white;
 
     &__media-box {
         display: flex;
@@ -14,12 +15,10 @@
         font-size: 1.5rem;
         padding: 1rem;
         background-color: $color-light-black;
-        color: $color-txt-white;
     }
 
     &__copyright {
         text-align: center;
-        color: $color-txt-white;
         font-size: 1.1rem;
     }
 }

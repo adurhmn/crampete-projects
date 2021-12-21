@@ -7,7 +7,7 @@
     width: 80vw;
 
     &__content {
-        padding: $padding-container-horizontal $padding-container-vertical;
+        padding: 3rem $padding-container-vertical;
     }
 
 }
@@ -19,17 +19,7 @@
         width: initial;
         height: initial;        
         &__content {
-            padding: $padding-container-horizontal $padding-container-vertical-small;
+            padding: 3rem $padding-container-vertical-small;
         }
     }
-}
-
-//TABLET
-@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
-
-}
-
-//MOBILE
-@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
-
 }
