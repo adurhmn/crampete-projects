@@ -1,0 +1,35 @@
+@use '../abstract/variable' as *;
+
+.contentbar {
+    position: absolute;
+    top: 0;
+    left: 20vw;
+    width: 80vw;
+
+    &__content {
+        padding: $padding-container-horizontal $padding-container-vertical;
+    }
+
+}
+
+//MOBILE & TABLET
+@media only screen and (max-width: $tablet-breakpoint-end) {
+    .contentbar {
+        position: initial;
+        width: initial;
+        height: initial;        
+        &__content {
+            padding: $padding-container-horizontal $padding-container-vertical-small;
+        }
+    }
+}
+
+//TABLET
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+
+}

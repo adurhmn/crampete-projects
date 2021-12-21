@@ -1,0 +1,22 @@
+@use '../abstract/variable' as *;
+
+.btn {
+    display: inline-block;
+    padding: .8rem 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+
+    &--home {
+        background-color: $color-home;
+        border-bottom: 3px solid darken($color-home, 20%);
+    }
+    &--portfolio {
+        background-color: $color-portfolio;
+        border-bottom: 3px solid darken($color-portfolio, 20%);
+    }
+    &--contact {
+        background-color: $color-contact;
+        border-bottom: 3px solid darken($color-contact, 20%);
+    }
+}

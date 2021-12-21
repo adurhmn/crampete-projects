@@ -1,0 +1,50 @@
+@use '../abstract/variable' as *;
+
+.header {
+    height: 50rem;
+    background-image: linear-gradient(rgba(black, .3) 0%, rgba(black, .3) 100%), url('../assets/img/hero.jpg');
+    background-position: center;
+    background-size: cover;
+    color: $color-txt-white;
+    text-transform: uppercase;
+    position: relative;
+
+    &__content {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &__heading {
+        font-size: 4rem;
+        font-weight: 800;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+    }
+
+    &__nav {
+        width: 5rem;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        &-item {
+            width: .8rem;
+            height: .8rem;
+            border-radius: 50%;
+            background-color: white;
+            cursor: pointer;
+
+            &--checked {
+                background-color: grey;
+            }
+        }
+    }
+}

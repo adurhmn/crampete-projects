@@ -1,0 +1,37 @@
+//COLOR 
+$color-light-black: rgb(77, 80, 80);
+$color-dark-black: rgb(60, 63, 63);
+$color-txt-black: rgb(83, 83, 83);
+$color-txt-white: white; 
+$color-home: rgb(79, 123, 255);
+$color-about: rgb(255, 184, 53);
+$color-services: rgb(152, 42, 255);
+$color-portfolio: rgb(0, 168, 42);
+$color-contact: rgb(255, 0, 136);
+
+//BOX
+$width-card: 30%;
+$gutter-card-horizontal: 2.5rem;
+$padding-container-vertical: 10rem;
+$padding-container-horizontal: 10rem;
+$padding-container-vertical-small: 2rem;
+
+// BREAKPOINTS
+$mobile-breakpoint-end: 649px;
+$tablet-breakpoint-start: 650px;
+$tablet-breakpoint-end: 1024px;
+
+//MOBILE & TABLET
+@media only screen and (max-width: $tablet-breakpoint-end) {
+
+}
+
+//TABLET
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+
+}

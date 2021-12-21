@@ -1,0 +1,29 @@
+@use '../abstract/variable' as *;
+
+.skillset {
+
+    &__skill {
+        // background-color: grey;
+        // border: 2px solid grey;
+        border-radius: 1rem;
+        width: 100%;
+        color: $color-txt-white;
+        box-shadow: inset -3px -3px 10px rgba($color: $color-services, $alpha: .5), 0 3px 5px rgba($color: black, $alpha: .5);
+
+        &-text {
+            background-color: $color-services;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            text-align: center;
+            
+            &--1 {width: 90%;}
+            &--2 {width: 75%;}
+            &--3 {width: 66%;}
+            &--4 {width: 88%;}
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1.3rem;
+        }
+    }
+}

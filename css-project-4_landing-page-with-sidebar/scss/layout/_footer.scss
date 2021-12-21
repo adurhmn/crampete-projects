@@ -1,0 +1,25 @@
+@use '../abstract/variable' as *;
+
+.footer {
+    background-color: $color-dark-black;
+    padding: 4rem 0;
+
+    &__media-box {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+    }
+
+    &__media {
+        font-size: 1.5rem;
+        padding: 1rem;
+        background-color: $color-light-black;
+        color: $color-txt-white;
+    }
+
+    &__copyright {
+        text-align: center;
+        color: $color-txt-white;
+        font-size: 1.1rem;
+    }
+}

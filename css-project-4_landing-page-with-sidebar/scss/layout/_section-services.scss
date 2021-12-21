@@ -1,0 +1,117 @@
+@use '../abstract/variable' as *;
+
+.services {
+    padding:  $padding-container-horizontal 0;
+    border-top: 5px solid $color-services;
+    position: relative;
+
+
+    &__flag {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color-services;
+        color: $color-txt-white;
+        padding: 1rem 2rem;
+    }
+
+    &__card-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__card {
+        background-color: $color-services;
+        padding: 1.5rem 3rem;
+        width: 28%;
+        display: flex;
+        gap: 6%;
+        align-items: center;
+        color: $color-txt-white;
+
+        &-icon {
+            display: inline-block;
+            font-size: 3.5rem;
+        }
+
+        &-text {
+            display: inline-block;
+            font-size: 1.6rem;
+            font-weight: bold; 
+        }
+    }
+
+    &__content-box {
+        display: flex;
+    }
+
+    &__content {
+        &--main {
+            width: 65%;
+        }
+        &--sub {
+            width: 35%;
+            padding: 0 0 0 4rem;
+        }
+
+        &-heading {
+            color: $color-services;
+        }
+
+        &-img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}
+
+//MOBILE & TABLET
+@media only screen and (max-width: $tablet-breakpoint-end) {
+    .services {
+        &__content {
+            &--main {
+                width: 60%;
+            }
+            &--sub {
+                width: 40%;
+                padding: 0 5%;
+            }
+        }
+    }
+}
+
+//TABLET
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    .services {
+        &__card {
+            height: 8rem;
+            width: 80%;
+            margin: 1rem auto;
+        }
+
+        &__content-box {
+            flex-direction: column;
+        }
+
+        &__content {
+            &--main {
+                width: 100%;
+                text-align: center;
+            }
+            &--sub {
+                width: 80%;
+                margin: 3rem auto 0 auto;
+                padding: 0;
+            }
+        }
+    }
+}

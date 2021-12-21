@@ -1,0 +1,70 @@
+@use '../abstract/variable' as *;
+
+.portfolio {
+    padding:  $padding-container-horizontal 0;
+    border-top: 5px solid $color-portfolio;
+    position: relative;
+    text-align: center;
+
+    &__flag {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color-portfolio;
+        color: $color-txt-white;
+        padding: 1rem 2rem;
+    }
+
+    &__card-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: $gutter-card-horizontal;
+    }
+
+    &__card {
+        width: $width-card;
+        border-bottom: 3px solid rgba($color-portfolio, .4);
+
+        &-img {
+            width: 100%;
+            height: 20rem;
+        }
+
+        &-heading {
+            color: $color-portfolio;
+        }
+    }
+}
+
+
+//MOBILE & TABLET
+@media only screen and (max-width: $tablet-breakpoint-end) {
+
+}
+
+//TABLET
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+    // .about {
+    //     &__card {
+    //         width: 32%;
+    //     }
+
+    //     &__content {
+    //         &--sub {
+    //             padding: 0 5%;
+    //         }
+    //     }
+    // }
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    .portfolio {
+        &__card {
+            width: 47%;
+            margin: 1rem auto;
+        }
+    }
+}

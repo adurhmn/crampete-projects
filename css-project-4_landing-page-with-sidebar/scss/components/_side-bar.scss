@@ -1,0 +1,82 @@
+@use '../abstract/variable' as *;
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 20vw;
+    background-color: $color-light-black;
+    padding: 7vh 0;
+    text-align: center;
+    z-index: 10;
+
+    &__nav {
+        &-item {
+            display: block;
+            padding: 1.5rem 0;
+            color: $color-txt-white;
+            font-size: 1.3rem;
+            background-color: $color-dark-black;
+            border-left: 5px solid;
+            margin-bottom: 1px;
+
+            &--home {
+                border-left-color: $color-home;
+                color: $color-home;
+            }
+            &--about {border-left-color: $color-about;}
+            &--services {border-left-color: $color-services;}
+            &--portfolio {border-left-color: $color-portfolio;}
+            &--contact {border-left-color: $color-contact;}
+        }
+    }
+}
+
+//MOBILE & TABLET
+@media only screen and (max-width: $tablet-breakpoint-end) {
+    .sidebar {
+        position: initial;
+        height: initial;
+        width: initial;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 0;
+        background-color: $color-dark-black;
+       
+        &__nav {
+            display: inline-block;
+
+            &-item {
+                display: inline-block;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                border-left: none;
+                border-bottom: 5px solid;
+
+                &--home {
+                    border-bottom-color: $color-home;
+                    color: $color-home;
+                }
+                &--about {border-bottom-color: $color-about;}
+                &--services {border-bottom-color: $color-services;}
+                &--portfolio {border-bottom-color: $color-portfolio;}
+                &--contact {border-bottom-color: $color-contact;}
+            }
+        }
+    }
+}
+
+//TABLET
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+  
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    .sidebar {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}

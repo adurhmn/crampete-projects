@@ -1,0 +1,82 @@
+@use '../abstract/variable' as *;
+
+.contact {
+    padding:  $padding-container-horizontal 0;
+    border-top: 5px solid $color-contact;
+    position: relative;
+
+    &__flag {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color-contact;
+        color: $color-txt-white;
+        padding: 1rem 2rem;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-template-areas: 
+            "name_ email subject"
+            "message message message";
+        column-gap: 5%;
+        row-gap: 3rem;
+    }
+
+    &__input-box {
+        &--name {grid-area: name_;}
+        &--email {grid-area: email;}
+        &--subject {grid-area: subject;}
+        &--message {grid-area: message;}
+
+    }
+
+    &__input {
+        border-radius: 5px;
+        border: 3px solid rgba($color-contact, .4);
+        padding: 1rem 2rem;
+        width: 100%;
+        font-size: inherit;
+        font-family: inherit;
+
+        &-label {
+            display: block;
+            font-size: inherit;
+            font-family: inherit;
+            margin-bottom: .3rem;
+        }
+
+        &--message {
+            height: 20rem;
+        }
+    }
+}
+
+
+//MOBILE & TABLET
+@media only screen and (max-width: $tablet-breakpoint-end) {
+
+}
+
+//TABLET
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    .contact {
+        &__form {
+            grid-template-columns: 47% 47%;
+            grid-template-areas: 
+                "name_ email"
+                "subject subject"
+                "message message";
+            column-gap: 5%;
+            row-gap: 3rem;
+        }
+    }
+}
+
+

@@ -1,0 +1,110 @@
+@use '../abstract/variable' as *;
+
+.about {
+    padding:  $padding-container-horizontal 0;
+    border-top: 5px solid $color-about;
+    position: relative;
+
+    &__flag {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color-about;
+        color: $color-txt-white;
+        padding: 1rem 2rem;
+    }
+
+    &__card-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__card {
+        width: $width-card;
+        text-align: center;
+
+        &-img {
+            width: 100%;
+            height: 28rem;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &-heading {
+            color: $color-about;
+        }
+    }
+
+    &__content-box {
+        display: flex;
+    }
+
+    &__content {
+        &--main {
+            width: 65%;
+        }
+        &--sub {
+            width: 35%;
+            padding: 0 8rem;
+        }
+
+        &-heading {
+            color: $color-about;
+        }
+
+        &-img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}
+
+//MOBILE & TABLET
+@media only screen and (max-width: $tablet-breakpoint-end) {
+
+}
+
+//TABLET
+@media only screen and (min-width: $tablet-breakpoint-start) and (max-width: $tablet-breakpoint-end) {
+    .about {
+        &__card {
+            width: 32%;
+        }
+
+        &__content {
+            &--sub {
+                padding: 0 5%;
+            }
+        }
+    }
+}
+
+//MOBILE
+@media only screen and (min-width: 0) and (max-width: $mobile-breakpoint-end) {
+    .about {
+        &__card {
+            width: 80%;
+            margin: 1rem auto;
+        }
+
+        &__content-box {
+            flex-direction: column;
+        }
+
+        &__content {
+            &--main {
+                width: 100%;
+                text-align: center;
+            }
+            &--sub {
+                width: 80%;
+                margin: 3rem auto 0 auto;
+                padding: 0;
+            }
+        }
+    }
+}
