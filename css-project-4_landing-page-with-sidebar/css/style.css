@@ -1,3 +1,4 @@
+/* RESET ---------------------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* TYPOGRAPHY ---------------------------------------------------------------- */
 
 html {
   font-size: 62.5%;
@@ -40,9 +43,11 @@ body {
 
 @media only screen and (min-width: 0) and (max-width: 649px) {
   html {
-    font-size: 58%;
+    font-size: 56%;
   }
 }
+
+/* SIDEBAR COMPONENT ---------------------------------------------------------------- */
 .sidebar {
   position: fixed;
   top: 0;
@@ -137,6 +142,8 @@ body {
     gap: 3rem;
   }
 }
+
+/* LOGO COMPONENT ---------------------------------------------------------------- */
 .logo {
   display: inline-block;
   margin-bottom: 4rem;
@@ -163,6 +170,8 @@ body {
     margin-bottom: 0;
   }
 }
+
+/* BUTTON COMPONENT ---------------------------------------------------------------- */
 .btn {
   display: inline-block;
   padding: 0.8rem 1.6rem;
@@ -186,6 +195,7 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
+/* SKILLSET COMPONENT ---------------------------------------------------------------- */
 .skillset__skill {
   border-radius: 0.8rem;
   width: 100%;
@@ -216,6 +226,7 @@ body {
   margin-bottom: 1.3rem;
 }
 
+/* CONTENTBAR LAYOUT ---------------------------------------------------------------- */
 .contentbar {
   position: absolute;
   top: 0;
@@ -236,6 +247,8 @@ body {
     padding: 3rem 2rem;
   }
 }
+
+/* HEADER LAYOUT ---------------------------------------------------------------- */
 .header {
   height: 50rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%), url("../assets/img/hero.jpg");
@@ -280,6 +293,7 @@ body {
   background-color: grey;
 }
 
+/* WELCOME LAYOUT ---------------------------------------------------------------- */
 .welcome {
   padding: 5rem 0;
   text-align: center;
@@ -290,6 +304,7 @@ body {
   color: #337aff;
 }
 
+/* ABOUT LAYOUT ---------------------------------------------------------------- */
 .about {
   padding: 10rem 0;
   border-top: 5px solid #f8aa00;
@@ -312,6 +327,8 @@ body {
 .about__card {
   width: 30%;
   text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid rgba(248, 170, 0, 0.4);
 }
 .about__card-img {
   width: 100%;
@@ -353,7 +370,7 @@ body {
 @media only screen and (min-width: 0) and (max-width: 649px) {
   .about__card {
     width: 80%;
-    margin: 1rem auto;
+    margin: 2rem auto;
   }
   .about__content-box {
     flex-direction: column;
@@ -368,6 +385,8 @@ body {
     padding: 0;
   }
 }
+
+/* SERVICES LAYOUT ---------------------------------------------------------------- */
 .services {
   padding: 10rem 0;
   border-top: 5px solid #982aff;
@@ -453,6 +472,8 @@ body {
     padding: 0;
   }
 }
+
+/* PORTFOLIO LAYOUT ---------------------------------------------------------------- */
 .portfolio {
   padding: 10rem 0;
   border-top: 5px solid #00a82a;
@@ -492,6 +513,8 @@ body {
     margin: 1rem auto;
   }
 }
+
+/* CONTACT LAYOUT ---------------------------------------------------------------- */
 .contact {
   padding: 10rem 0;
   border-top: 5px solid #ff0088;
@@ -554,6 +577,8 @@ body {
     column-gap: 4%;
   }
 }
+
+/* FOOTER LAYOUT ---------------------------------------------------------------- */
 .footer {
   background-color: #181818;
   padding: 4rem 0;
@@ -574,6 +599,7 @@ body {
   font-size: 1.1rem;
 }
 
+/* HELPER CLASSES ---------------------------------------------------------------- */
 .mgn-btm-vsmall {
   margin-bottom: 0.5rem;
 }
