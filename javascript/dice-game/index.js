@@ -88,7 +88,7 @@ const hold = function () {
     score['player' + activePlayer].textContent = Number(score['player' + activePlayer].textContent) + 
                                              Number(currentScore['player' + activePlayer].textContent);
     currentScore['player' + activePlayer].textContent = 0;
-    if (Number(score['player' + activePlayer].textContent) >= 10) {
+    if (Number(score['player' + activePlayer].textContent) >= 100) {
         playerWon();
     } else {
         changePlayer();
