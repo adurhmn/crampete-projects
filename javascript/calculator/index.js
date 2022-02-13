@@ -37,6 +37,12 @@ const finalValidation = function () {
     //makes sure there is no operand or at the end of expression
     const l = calcString.slice(-1)
     if (l === '+' || l === '-' || l === '*' || l === '/') calcString = calcString.slice(0, -1);
+    //removes empty parenthesis (still not an efficient solution)
+    while (true) {
+        if (calcString.includes('()')) {
+            calcString = calcString.split('()').join(''); 
+        } else break;
+    }
 }
 
 ////////////////////////////////////
@@ -102,7 +108,7 @@ for (let btn of operatorBtns) {
 ansBtn.addEventListener('click', function () {
     finalValidation();
     enableOperators();
-    screen.innerText = `Result: ${eval(calcString)}`;
+    screen.innerText = `Result: ${eval(calcString)}` ?? '';
     calcString = '';
 });
 
