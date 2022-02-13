@@ -108,7 +108,7 @@ for (let btn of operatorBtns) {
 ansBtn.addEventListener('click', function () {
     finalValidation();
     enableOperators();
-    screen.innerText = `Result: ${eval(calcString)}` ?? '';
+    screen.innerText = `Result: ${eval(calcString) || 0}`;
     calcString = '';
 });
 
