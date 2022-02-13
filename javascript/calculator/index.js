@@ -115,4 +115,5 @@ ansBtn.addEventListener('click', function () {
 
 //////TODO
 /* VALIDATION - check for empty paranthesis*/
+/* VALIDATION - fix parenthesis-function-call bug*/
 /* ORGANIZATION - make the code logic understandable. make it DRY*/
