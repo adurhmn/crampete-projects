@@ -39,9 +39,8 @@ const finalValidation = function () {
     if (l === '+' || l === '-' || l === '*' || l === '/') calcString = calcString.slice(0, -1);
     //removes empty parenthesis (still not an efficient solution)
     while (true) {
-        if (calcString.includes('()')) {
-            calcString = calcString.split('()').join(''); 
-        } else break;
+        if (calcString.includes('()')) calcString = calcString.replaceAll('()', '');
+        else break;
     }
 }
 
