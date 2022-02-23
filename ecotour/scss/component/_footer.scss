@@ -1,0 +1,46 @@
+@use "../abstract/variable" as *;
+
+.footer {
+  text-align: center;
+  color: #fff;
+  background-color: $color-primary-dark;
+  padding: 10rem $pd-container-horizontal;
+
+  display: flex;
+  gap: 3vw;
+  justify-content: center;
+
+  &__item {
+    flex: 0 1 30rem;
+    max-width: 30rem;
+
+    > :not(:last-child) {
+      margin-bottom: $mgn-vertical-1;
+    }
+  }
+
+  &__nav {
+    &-item {
+      display: block;
+      text-transform: uppercase;
+      &:not(:last-child) {
+        margin-bottom: $mgn-vertical-1;
+      }
+    }
+  }
+
+  &__title {
+    color: $color-primary;
+    text-transform: uppercase;
+  }
+
+  &__logo {
+    width: 100%;
+  }
+
+  &__social-media {
+    display: inline-flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}

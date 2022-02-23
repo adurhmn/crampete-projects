@@ -1,0 +1,46 @@
+@use "../abstract/variable" as *;
+
+.header__nav {
+  width: 3rem;
+  height: 0.4rem;
+  position: relative;
+  background-color: #000;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: inherit;
+    left: 0;
+  }
+
+  &::before {
+    top: -1rem;
+  }
+
+  &::after {
+    bottom: -1rem;
+  }
+}
+
+.nav--tabs {
+  border-bottom: 2px solid $color-primary;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.nav-item--tabs {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem 0.3rem;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-item-active--tabs {
+  font-weight: 500;
+  border-color: $color-primary;
+}

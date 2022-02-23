@@ -1,0 +1,108 @@
+@use "../abstract/variable" as *;
+
+//SECTION BRIEF
+.dest-brief {
+  text-align: center;
+  padding: 10rem $pd-container-horizontal;
+  width: 80rem;
+  margin: 0 auto;
+
+  > * {
+    margin-bottom: $mgn-vertical-1;
+  }
+
+  &__title {
+    color: $color-primary-dark;
+  }
+}
+
+//SECTION COLLAGE
+.collage {
+  height: 20vw;
+
+  display: flex;
+
+  &__item {
+    height: 100%;
+    width: 33.33333%;
+    // object-fit: cover;
+  }
+}
+
+//SECTION GEOGRAPHY
+.geography {
+  background-color: rgb(224, 224, 224);
+  padding: 10rem $pd-container-horizontal;
+
+  display: flex;
+  gap: 3vw;
+  justify-content: center;
+  align-items: center;
+
+  &__text-content {
+    max-width: 50%;
+    > *:not(:last-child) {
+      margin-bottom: $mgn-vertical-1;
+    }
+  }
+  &__map {
+    width: 25%;
+  }
+  &__map-img {
+    width: 100%;
+    margin-bottom: $mgn-vertical-2;
+  }
+
+  &__map-caption {
+    background-color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+  }
+
+  &__map-caption-text {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__map-caption-img {
+    color: rgba($color: $color-primary-dark, $alpha: 0.8);
+    font-size: 5rem;
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
+  }
+}
+
+//SECTION BRIEF-2
+.dest-brief-2 {
+  color: #fff;
+  padding: 20rem $pd-container-horizontal;
+  text-align: center;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url(../assets/img/dest-brief-2.jpg);
+  background-position: bottom center;
+
+  &__text {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+//SECTION BRIEF-3
+.dest-brief-3 {
+  padding: 15rem $pd-container-horizontal;
+
+  > :first-child {
+    text-align: center;
+    margin-bottom: $mgn-vertical-1;
+  }
+
+  &__text {
+    columns: 2;
+    gap: 2vw;
+  }
+}

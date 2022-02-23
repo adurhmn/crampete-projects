@@ -1,0 +1,200 @@
+@use "../abstract/variable" as *;
+
+//SECTION PRIVATE-TOUR OPTION
+.privtour-option {
+  padding: 12rem $pd-container-horizontal;
+
+  &__text-content {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    color: $color-primary-dark;
+    margin-bottom: $mgn-vertical-1;
+  }
+
+  &__card-box {
+    color: #fff;
+    margin-top: $mgn-vertical-2;
+
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+  }
+
+  &__card {
+    padding: 3vw;
+    flex: 0 0 50%;
+    max-width: 65rem;
+
+    > :first-child {
+      margin-bottom: $mgn-vertical-1;
+    }
+
+    &:first-child {
+      background-color: $color-primary;
+    }
+    &:last-child {
+      background-color: $color-primary-dark;
+    }
+  }
+}
+
+// SECTION LAYOUT PRIVATE TOUR GET STARTED
+.privtour-get-started {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url(../assets/img/privtour-intro.jpg);
+  // background-size: cover;
+  background-position: center right;
+  padding: 15rem $pd-container-horizontal;
+  color: #fff;
+
+  &__title {
+    text-align: center;
+    margin-bottom: $mgn-vertical-2;
+  }
+
+  // SUB-SECTION LAYOUT PRIVATE TOUR GET STARTED POPUP
+  &__popup {
+    position: fixed;
+    background-color: rgba($color: black, $alpha: 0.8);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.4s;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    &:target {
+      display: flex;
+      opacity: 1;
+    }
+  }
+}
+
+// SECTION LAYOUT PRIVATE TOUR FEATURE
+.privtour-feature {
+  padding: 10rem $pd-container-horizontal;
+
+  > :not(:last-child) {
+    text-align: center;
+    margin: 0 auto $mgn-vertical-1 auto;
+    width: 80%;
+    max-width: 70rem;
+  }
+}
+
+.privtour-gallery {
+  margin-top: $mgn-vertical-2;
+
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(2, 18vw);
+  gap: 1px;
+
+  &__item {
+    &--1 {
+      grid-area: 1 / 1 / 2 / 8;
+      // grid-area: priv-gal-1;
+    }
+    &--2 {
+      grid-area: 1 / 8 / 2 / 12;
+      // grid-area: priv-gal-2;
+    }
+    &--3 {
+      grid-area: 1 / 12 / 2 / 16;
+      // grid-area: priv-gal-3;
+    }
+    &--4 {
+      grid-area: 2 / 1 / 3 / 5;
+      // grid-area: priv-gal-4;
+    }
+    &--5 {
+      grid-area: 2 / 5 / 3 / 9;
+      // grid-area: priv-gal-5;
+    }
+    &--6 {
+      grid-area: 2 / 9 / 3 / 16;
+      // grid-area: priv-gal-6;
+    }
+  }
+}
+
+// SECTION LAYOUT PRIVATE TOUR REVIEW
+.privtour-review {
+  background-color: rgb(238, 238, 238);
+  padding: 10rem $pd-container-horizontal;
+
+  display: flex;
+  gap: 5vw;
+  justify-content: center;
+
+  // STAFF SIDE
+  &__staffs {
+    flex: 0 0 40%;
+  }
+
+  &__staff-box {
+    display: grid;
+    gap: 3vw;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    margin: $mgn-vertical-2 0;
+  }
+
+  &__staff {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    // object-fit: cover;
+  }
+
+  // CONTENT SIDE
+  &__user {
+    &-review {
+      flex: 0 0 40%;
+      padding: 3rem;
+      background-color: #fff;
+      margin-bottom: $mgn-vertical-1;
+      > * {
+        margin-bottom: $mgn-vertical-3;
+      }
+    }
+
+    &-name {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: $mgn-vertical-1 auto;
+    }
+  }
+
+  &__brand {
+    &-review {
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    &--quote {
+      font-size: 5rem;
+    }
+
+    &--star {
+      color: $color-primary-dark;
+    }
+
+    &--brand {
+      height: 6rem;
+    }
+  }
+}

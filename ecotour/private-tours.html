@@ -1,0 +1,479 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Private Tours - Ecotour | by Abdur Rahman</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- #SECTION HEADER-->
+    <header class="header">
+      <div class="header__nav">
+        <nav class="nav--main"></nav>
+      </div>
+      <img src="./assets/img/logo.webp" alt="logo" class="header__logo" />
+      <a href="#" class="header__btn btn-header">
+        <i class="fa-solid fa-phone"></i>
+        <p>get in touch</p>
+      </a>
+    </header>
+    <!-- #SECTION BANNER-HEADER-->
+    <div class="banner banner--privtour">
+      <h2 class="banner__title--secondary head-2">receive vip treatment</h2>
+      <h1 class="banner__title--primary head-1">Private Tours</h1>
+    </div>
+    <!-- #SECTION PRIVATE-TOUR OPTION-->
+    <div class="privtour-option">
+      <div class="privtour-option__text-content">
+        <h3 class="head-3 privtour-option__title">
+          Privatize Any of Our Daytrips
+        </h3>
+        <p class="privtour-option__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+          ducimus, ipsum eligendi iste quia placeat necessitatibus porro sed
+          aperiam eum voluptas architecto excepturi.
+        </p>
+      </div>
+      <div class="privtour-option__card-box">
+        <div class="privtour-option__card">
+          <h3 class="head-3">Tailor Made Trips</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+            laboriosam nam minima ipsa architecto ipsam dolore quae sequi aut,
+            voluptate perspiciatis animi optio, ut odit repellat debitis eos
+            nesciunt aliquam voluptatibus ratione!
+          </p>
+        </div>
+        <div class="privtour-option__card">
+          <h3 class="head-3">Groups</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+            laboriosam nam minima ipsa architecto ipsam dolore quae sequi aut,
+            voluptate perspiciatis animi optio, ut odit repellat debitis!
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- #SECTION GET STARTED-->
+    <div class="privtour-get-started" id="privtour-get-started">
+      <h3 class="head-3 privtour-get-started__title">Let's Get Started?</h3>
+      <div class="guide">
+        <div class="guide__item">
+          <i class="fa-solid fa-magnifying-glass-location guide__icon"></i>
+          <p>Select your travel experience</p>
+        </div>
+        <div class="guide__item">
+          <i class="fa-regular fa-hand-pointer guide__icon"></i>
+          <p>Choose a departure date</p>
+        </div>
+        <div class="guide__item">
+          <i class="fa-solid fa-phone-volume guide__icon"></i>
+          <p>Call us to book your trip</p>
+        </div>
+        <a
+          href="#privtour-popup"
+          class="guide__btn btn-primary privtour-get-started__btn"
+          >get started</a
+        >
+      </div>
+      <!-- #SUB-SECTION GET STARTED-->
+      <div class="privtour-get-started__popup" id="privtour-popup">
+        <form class="popup">
+          <div class="popup__header">
+            <div class="popup__travel-desc">
+              <label
+                class="popup__field-title popup__field-title--desc bold"
+                for="travel-desc"
+              >
+                select your travel experience
+              </label>
+              <input
+                type="text"
+                class="popup__field"
+                placeholder="Discovering the Larimar and the Deep South"
+                id="travel-desc"
+              />
+            </div>
+            <div class="popup__travel-date">
+              <label class="popup__field-title bold" for="travel-date"
+                >Select date</label
+              >
+              <input
+                type="text"
+                class="popup__field"
+                id="travel-date"
+                placeholder="dd / mm / yyyy"
+              />
+            </div>
+            <div class="popup__travel-adult">
+              <label class="popup__field-title bold" for="travel-adult" required
+                >Number of adults</label
+              >
+              <input type="number" class="popup__field" id="travel-adult" />
+            </div>
+            <div class="popup__travel-child">
+              <label class="popup__field-title bold" for="travel-child"
+                >Number of children</label
+              >
+              <input type="number" class="popup__field" id="travel-child" />
+            </div>
+          </div>
+          <div class="popup__body">
+            <div class="popup__cust-fname">
+              <label class="popup__field-title" for="cust-fname"
+                >First name</label
+              >
+              <input
+                type="text"
+                class="popup__field"
+                id="cust-fname"
+                required
+              />
+            </div>
+
+            <div class="popup__cust-lname">
+              <label class="popup__field-title" for="cust-lname"
+                >Last name</label
+              >
+              <input
+                type="text"
+                class="popup__field"
+                id="cust-lname"
+                required
+              />
+            </div>
+
+            <div class="popup__cust-mail">
+              <label class="popup__field-title" for="cust-mail">Email</label>
+              <input type="text" class="popup__field" id="cust-mail" required />
+            </div>
+
+            <div class="popup__cust-phone">
+              <label class="popup__field-title" for="cust-phone">Phone</label>
+              <input
+                type="text"
+                class="popup__field"
+                id="cust-phone"
+                required
+              />
+            </div>
+
+            <div class="popup__cust-msg">
+              <label class="popup__field-title" for="cust-msg">Message</label>
+              <input
+                type="text"
+                class="popup__field popup__field--msg"
+                id="cust-message"
+              />
+            </div>
+
+            <div class="popup__cust-country">
+              <label class="popup__field-title" for="cust-country"
+                >I'm from</label
+              >
+              <input
+                type="text"
+                class="popup__field"
+                id="cust-name"
+                placeholder="Afghanistan"
+                required
+              />
+            </div>
+
+            <div class="popup__cust-agreement">
+              <input
+                type="checkbox"
+                class="popup__checkbox"
+                id="cust-agreement"
+              />&nbsp;&nbsp;
+              <label class="popup__field-title" for="cust-agreement"
+                >I've read and agree to the privacy policy</label
+              >
+            </div>
+            <button href="#" class="popup__cust-btn btn-primary">
+              send travel request
+            </button>
+          </div>
+          <a href="#privtour-get-started" class="popup__close-btn">X</a>
+        </form>
+      </div>
+    </div>
+    <!-- #SECTION FEATURE-->
+    <div class="privtour-feature">
+      <h3 class="head-3">Get Inspired</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+        suscipit assumenda vel perferendis a id delectus impedit pariatur,
+        consequuntur quia cupiditate nam!
+      </p>
+      <div class="privtour-gallery">
+        <figure class="privtour-gallery__item--1 figure">
+          <img
+            src="./assets/img/home-gal-1.jpg"
+            alt="ecotour barahona"
+            class="figure__img"
+          />
+          <figcaption class="figure__caption">
+            <h3 class="head-3">Lorem, ipsum dolor.</h3>
+            <div class="figure__caption--extra">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                vitae perspiciatis laborum cum, ut vero vel commodi. Este colom
+                suptle!
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="privtour-gallery__item--2 figure">
+          <img
+            src="./assets/img/home-gal-2.jpg"
+            alt="ecotour barahona"
+            class="figure__img"
+          />
+          <figcaption class="figure__caption">
+            <h3 class="head-3">Lorem, ipsum dolor.</h3>
+            <div class="figure__caption--extra">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                vitae perspiciatis laborum cum, ut vero vel commodi. Este colom
+                suptle!
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="privtour-gallery__item--3 figure">
+          <img
+            src="./assets/img/home-gal-4.jpg"
+            alt="ecotour barahona"
+            class="figure__img"
+          />
+          <figcaption class="figure__caption">
+            <h3 class="head-3">Lorem, ipsum dolor.</h3>
+            <div class="figure__caption--extra">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                vitae perspiciatis laborum cum, ut vero vel commodi. Este colom
+                suptle!
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="privtour-gallery__item--4 figure">
+          <img
+            src="./assets/img/home-gal-5.jpg"
+            alt="ecotour barahona"
+            class="figure__img"
+          />
+          <figcaption class="figure__caption">
+            <h3 class="head-3">Lorem, ipsum dolor.</h3>
+            <div class="figure__caption--extra">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                vitae perspiciatis laborum cum, ut vero vel commodi. Este colom
+                suptle!
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="privtour-gallery__item--5 figure">
+          <img
+            src="./assets/img/home-gal-6.jpg"
+            alt="ecotour barahona"
+            class="figure__img"
+          />
+          <figcaption class="figure__caption">
+            <h3 class="head-3">Lorem, ipsum dolor.</h3>
+            <div class="figure__caption--extra">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                vitae perspiciatis laborum cum, ut vero vel commodi. Este colom
+                suptle!
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="privtour-gallery__item--6 figure">
+          <img
+            src="./assets/img/home-gal-7.jpg"
+            alt="ecotour barahona"
+            class="figure__img"
+          />
+          <figcaption class="figure__caption">
+            <h3 class="head-3">Lorem, ipsum dolor.</h3>
+            <div class="figure__caption--extra">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+                vitae perspiciatis laborum cum, ut vero vel commodi. Este colom
+                suptle!
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <!-- #SECTION REVIEW-->
+    <div class="privtour-review">
+      <div class="privtour-review__staffs">
+        <h3 class="head-3">Our Guides & Local Experts</h3>
+        <div class="privtour-review__staff-box">
+          <img
+            src="./assets/img/home-opinion.jpeg"
+            alt="ecotour barahona staff"
+            class="privtour-review__staff"
+          />
+          <img
+            src="./assets/img/home-opinion.jpeg"
+            alt="ecotour barahona staff"
+            class="privtour-review__staff"
+          />
+          <img
+            src="./assets/img/home-opinion.jpeg"
+            alt="ecotour barahona staff"
+            class="privtour-review__staff"
+          />
+          <img
+            src="./assets/img/home-opinion.jpeg"
+            alt="ecotour barahona staff"
+            class="privtour-review__staff"
+          />
+          <img
+            src="./assets/img/home-opinion.jpeg"
+            alt="ecotour barahona staff"
+            class="privtour-review__staff"
+          />
+          <img
+            src="./assets/img/home-opinion.jpeg"
+            alt="ecotour barahona staff"
+            class="privtour-review__staff"
+          />
+        </div>
+        <a href="#" class="btn-primary">meet out guides</a>
+      </div>
+      <div class="privtour-review__content">
+        <div class="privtour-review__user-review">
+          <i class="fa-solid fa-quote-right privtour-review__icon--quote"></i>
+          <h4 class="bold">Fantastic experience!</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias
+            aut pariatur quam doloribus blanditiis itaque. Eveniet cupiditate
+            sequi hic iste provident, beatae qui consequuntur nemo
+            exercitationem reprehenderit ea aspernatur minus porro aliquam iure
+            enim at.
+          </p>
+          <h4 class="privtour-review__user-name">john walker</h4>
+          <i class="fa-solid fa-spa"></i>&nbsp;
+          <span>
+            <i class="fa-solid fa-star privtour-review__icon--star"></i
+            ><i class="fa-solid fa-star privtour-review__icon--star"></i
+            ><i class="fa-solid fa-star privtour-review__icon--star"></i
+            ><i class="fa-solid fa-star privtour-review__icon--star"></i
+            ><i class="fa-solid fa-star privtour-review__icon--star"></i> </span
+          >&nbsp;
+          <span class="para-small">Reviewed 1 week ago</span>
+        </div>
+        <div class="privtour-review__brand-review">
+          <img
+            class="privtour-review__icon--brand"
+            src="./assets/img/brand-logo.png"
+            alt="tripadvisor logo"
+          />
+          <div>
+            <h4>ECOTOUR BARAHONA</h4>
+            <span>
+              <i class="fa-solid fa-star privtour-review__icon--star"></i
+              ><i class="fa-solid fa-star privtour-review__icon--star"></i
+              ><i class="fa-solid fa-star privtour-review__icon--star"></i
+              ><i class="fa-solid fa-star privtour-review__icon--star"></i
+              ><i class="fa-solid fa-star-half privtour-review__icon--star"></i
+              >&nbsp;
+            </span>
+            <span class="para-small privtour-review__brandratingcaption">
+              50 reviews
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- #SECTION CTA-->
+    <div class="cta">
+      <div class="cta__content">
+        <i class="fa-regular fa-calendar-days cta__icon"></i>
+        <div class="cta__text">
+          <h3 class="head-3">Book Now</h3>
+          <h3 class="head-3">lorem ipsum dolor sit</h3>
+        </div>
+      </div>
+      <a href="#" class="cta__btn btn-secondary">check the dates</a>
+    </div>
+    <!-- #SECTION FOOTER-->
+    <footer class="footer">
+      <div class="footer__item">
+        <img src="./assets/img/logo.webp" alt="logo" class="footer__logo" />
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab enim
+          iusto fugit officia delectus ea maxime deserunt ipsam numquam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+          tempora beatae ex amet quisquam.
+        </p>
+      </div>
+      <div class="footer__item">
+        <h4 class="footer__title">about us</h4>
+        <nav class="footer__nav">
+          <a href="#" class="footer__nav-item">about ecotour</a>
+          <a href="#" class="footer__nav-item">barahona</a>
+          <a href="#" class="footer__nav-item">our team</a>
+          <a href="#" class="footer__nav-item">guestbook</a>
+          <a href="#" class="footer__nav-item">imprint</a>
+        </nav>
+      </div>
+      <div class="footer__item">
+        <h4 class="footer__title">customer service</h4>
+        <nav class="footer__nav">
+          <a href="#" class="footer__nav-item">booking conditions</a>
+          <a href="#" class="footer__nav-item">contact-us</a>
+          <a href="#" class="footer__nav-item">faq's</a>
+          <a href="#" class="footer__nav-item">legal notice</a>
+          <a href="#" class="footer__nav-item">privacy policy</a>
+        </nav>
+      </div>
+      <div class="footer__item">
+        <h4 class="footer__title">reservations & bookings</h4>
+        <p href="#">MONDAY TO FRIDAY<br />from 8:00 am to 8:00 pm</p>
+        <p href="#">SATURDAY TO SUNDAY<br />from 9:00 am to 5:00 pm</p>
+        <p href="#">
+          Atlantic Standard Time<br />
+          +1 (809) 856 2260
+        </p>
+      </div>
+      <div class="footer__item">
+        <h4 class="footer__title">follow us</h4>
+        <div class="footer__social-media">
+          <a href="https://www.facebook.com/"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href="https://www.instagram.com/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.twitter.com/"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+@use "../abstract/variable" as *;
+
+//SECTION TABS
+.tabs {
+  padding: 10rem $pd-container-horizontal;
+
+  &__title {
+    margin-bottom: $mgn-vertical-2;
+  }
+
+  &__nav {
+    margin-bottom: $mgn-vertical-1;
+  }
+}
+
+//SECTION TAB--HIGHLIGHTS
+.tab--highlights {
+  display: flex;
+  gap: 3rem;
+}
+
+.tab {
+  &__travel-info {
+    flex: 0 0 35rem;
+    padding: 3rem;
+    background-color: rgb(238, 238, 238);
+  }
+
+  &__info-box {
+    margin-top: $mgn-vertical-3;
+    list-style: none;
+  }
+
+  &__info {
+    padding: 1.5rem 0;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid darkgrey;
+    }
+  }
+
+  &__price-box {
+    text-align: center;
+    background-color: rgb(218, 218, 218);
+    padding: 2rem;
+    margin-top: $mgn-vertical-3;
+  }
+
+  &__price {
+    font-size: 1.8rem;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    background-color: $color-primary;
+  }
+
+  &__travel-map {
+    flex: 1;
+  }
+
+  &__map {
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+}

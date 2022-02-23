@@ -1,0 +1,40 @@
+@use "../abstract/variable" as *;
+
+.btn-header,
+.btn-primary,
+.btn-secondary {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  width: max-content;
+  white-space: nowrap;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(85%);
+  }
+}
+
+.btn-header {
+  padding: 1.2rem 3rem;
+  border: 1px solid rgba($color: $color-primary, $alpha: 0.7);
+  background-color: #fff;
+  color: #000;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-primary {
+  padding: 1.5rem 4rem;
+  background-color: $color-primary;
+  color: #fff;
+}
+
+.btn-secondary {
+  padding: 1.5rem 4rem;
+  background-color: #fff;
+  color: rgb(54, 54, 54);
+}
