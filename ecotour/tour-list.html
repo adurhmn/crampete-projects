@@ -1,0 +1,618 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour-List - Ecotour | by Abdur Rahman</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- #SECTION HEADER-->
+    <header class="header">
+      <div class="header__nav">
+        <div class="header__nav-btn hamburger">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </div>
+        <nav class="nav--main hidden">
+          <span class="nav-close-btn--main">X</span>
+          <p class="nav-item--main nav-item--home" data-page="index">home</p>
+          <p
+            class="nav-item--main nav-item--destination"
+            data-page="destination"
+          >
+            destination
+          </p>
+          <p
+            class="nav-item--main nav-item--private-tour"
+            data-page="private-tour"
+          >
+            private tour
+          </p>
+          <p
+            class="nav-item--main nav-item--single-tour"
+            data-page="single-tour"
+          >
+            single tour
+          </p>
+          <p
+            class="nav-item--main nav-item--tour-list nav-item-active--main"
+            data-page="tour-list"
+          >
+            tour list
+          </p>
+        </nav>
+      </div>
+      <img src="./assets/img/logo.webp" alt="logo" class="header__logo" />
+      <a href="#" class="header__btn btn-header">
+        <i class="fa-solid fa-phone"></i>
+        <p>get in touch</p>
+      </a>
+    </header>
+    <!-- #SECTION BANNER-HEADER-->
+    <div class="banner banner--tourlist">
+      <h2 class="banner__title--secondary head-2">
+        discover a hidden paradise
+      </h2>
+      <h1 class="banner__title--primary head-1">Our Travels</h1>
+      <a href="#" class="btn-primary">book now</a>
+    </div>
+    <!-- #SECTION TOURLIST BREIF-->
+    <div class="tourlist-brief">
+      <h3 class="head-3">Our Tours</h3>
+      <p class="bold">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+        voluptatem, architecto repellat alias consequuntur hic harum dolor
+        expedita voluptatibus ullam veniam odit, unde eligendi. Minima
+        voluptates eum enim fugiat, nam debitis voluptatem praesentium
+        blanditiis tempore, illum vero, corporis obcaecati nostrum ab fugit rem
+        similique. Eveniet.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rerum
+        veniam maiores sapiente quaerat accusamus porro aut eum praesentium,
+        magnam, accusantium adipisci aliquam soluta consectetur voluptatum!
+        Quas, modi?
+      </p>
+    </div>
+    <!-- #SECTION TOURLIST CARDS-->
+    <div class="tourlist-cards">
+      <!-- #SUB-SECTION TOURLIST TRIPS-->
+      <nav class="trips tourlist-trips">
+        <figure class="trip tourlist-trip tourlist-trip--active">
+          <div class="trip__icon-box">
+            <i class="fa-solid fa-earth-americas trip__icon"></i>
+          </div>
+          <figcaption class="trip__text">All Categories</figcaption>
+        </figure>
+        <figure class="trip tourlist-trip">
+          <div class="trip__icon-box">
+            <i class="fa-solid fa-suitcase trip__icon"></i>
+          </div>
+          <figcaption class="trip__text">Day Trips</figcaption>
+        </figure>
+        <figure class="trip tourlist-trip">
+          <div class="trip__icon-box">
+            <i class="fa-solid fa-suitcase-rolling trip__icon"></i>
+          </div>
+          <figcaption class="trip__text">Multi-Day Trips</figcaption>
+        </figure>
+        <figure class="trip tourlist-trip">
+          <div class="trip__icon-box">
+            <i class="fa-solid fa-van-shuttle trip__icon"></i>
+          </div>
+          <figcaption class="trip__text">Private Tours</figcaption>
+        </figure>
+      </nav>
+
+      <!-- #SUB-SECTION TOURLIST CARD-BOX-->
+      <div class="tourlist-cards__card-box">
+        <div class="tourlist-cards__card">
+          <img
+            src="./assets/img/home-gal-8.jpg"
+            alt="..."
+            class="tourlist-cards__img"
+          />
+          <div class="tourlist-cards__info-box">
+            <p><span class="bold">ROUTE:</span> Barahona - Paraiso</p>
+            <ul class="tourlist-cards__info-box--inner">
+              <li class="tourlist-cards__info-item">
+                <i class="fa-regular fa-clock"></i>&nbsp;
+                <span>Horseback riding / Duration: 3-4 hours</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-solid fa-location"></i>&nbsp;
+                <span>Departing from: Barahona</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-solid fa-camera"></i>&nbsp;
+                <span>Panoramic view over the Caribbean Sea</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-solid fa-water"></i>&nbsp;
+                <span>Ride through a river</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-regular fa-flag"></i>&nbsp;
+                <span>Stop at the paprika greenhouse</span>
+              </li>
+            </ul>
+          </div>
+          <div class="tourlist-cards__text-box">
+            <div class="tourlist-cards__trip-info">
+              <h3 class="head-3 tourlist-cards__title">Garden of Eden</h3>
+              <h4 class="bold">DAYTRIP</h4>
+              <p>Departing from: Barahona</p>
+              <p><i class="fa-solid fa-stopwatch"></i>&nbsp;2-3 Hours</p>
+            </div>
+            <div class="tourlist-cards__price-info">
+              <p class="price-label">$55</p>
+              <p class="bold">per adult</p>
+              <p class="para-small">Transportation included</p>
+            </div>
+            <p class="tourlist-cards__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              doloremque aliquid deserunt perferendis accusamus. Provident sint
+              beatae quae! Voluptatum sunt non, repellat nostrum architecto
+              soluta pariatur aliquid, voluptate tenetur commodi quam sit quos
+              culpa?<br />Nobis officiis, aliquam itaque laudantium iusto
+              accusantium minima numquam illo odio cum et doloribus corporis rem
+              ipsum fugiat
+              <span class="tourlist-cards__text--extra">
+                fuga officia placeat voluptatibus provident alias autem. Omnis
+                totam illo nostrum dolor! Facilis recusandae unde architecto.<br /><br />Ratione
+                blanditiis consequuntur, amet odit rem ad qui quasi doloremque
+                debitis recusandae. Culpa voluptas vero veniam pariatur
+                voluptates modi molestias quam unde beatae sed repellat
+                consectetur corporis illo voluptatum repellendus veritatis vel
+                esse quo fugit, fugiat sint est quia nesciunt.<br /><br />Aliquam,
+                at fuga! Cupiditate quidem sed odio beatae ad harum ipsam iste
+                suscipit repudiandae consequatur quibusdam, temporibus dolorum
+                ut veniam quaerat blanditiis ducimus expedita nam totam odit
+                tempore! Necessitatibus fuga eligendi quam nobis quasi
+                dolores,<br /><br />mollitia omnis non error repellendus dicta
+                quia magnam quo iusto incidunt voluptatum alias vel hic!
+                Consequatur nisi autem vel aut iste exercitationem veniam
+                reiciendis sed. Impedit consectetur ipsam ab possimus.
+              </span>
+            </p>
+            <div class="tourlist-cards__review-box">
+              <i class="fa-solid fa-spa"></i>&nbsp;
+              <span>
+                <i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star color-prim"></i> </span
+              >&nbsp;
+              <span class="para-small">2736 opinions</span>
+            </div>
+            <div class="tourlist-cards__cta">
+              <div class="tourlist-cards__icon-box">
+                <i class="fa-regular fa-circle-question color-prim"></i
+                >&nbsp;<span>Info</span>
+                &nbsp;&nbsp;
+                <i class="fa-solid fa-photo-film color-prim"></i
+                >&nbsp;<span>Photos</span>&nbsp;&nbsp;
+                <i class="fa-regular fa-map color-prim"></i>&nbsp;<span
+                  >Map</span
+                >
+              </div>
+              <div class="btn-primary tourlist-cards__cta-btn">book now</div>
+            </div>
+          </div>
+        </div>
+        <div class="tourlist-cards__overlay overlay">&nbsp;</div>
+        <div class="tourlist-cards__card">
+          <img
+            src="./assets/img/home-gal-7.jpg"
+            alt="..."
+            class="tourlist-cards__img"
+          />
+          <div class="tourlist-cards__info-box">
+            <p><span class="bold">ROUTE:</span> Barahona - Beach</p>
+            <ul class="tourlist-cards__info-box--inner">
+              <li class="tourlist-cards__info-item">
+                <i class="fa-regular fa-clock"></i>&nbsp;
+                <span>Water exploration / Duration: 3-4 hours</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-solid fa-location"></i>&nbsp;
+                <span>Departing from: Barahona Beach</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-solid fa-camera"></i>&nbsp;
+                <span>Panoramic view over the Caribbean Sea</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-solid fa-water"></i>&nbsp;
+                <span>Ride through a river</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-regular fa-flag"></i>&nbsp;
+                <span>Stop at the paprika greenhouse</span>
+              </li>
+            </ul>
+          </div>
+          <div class="tourlist-cards__text-box">
+            <div class="tourlist-cards__trip-info">
+              <h3 class="head-3 tourlist-cards__title">Blue Jewel Mine</h3>
+              <h4 class="bold">DAYTRIP</h4>
+              <p>Departing from: Barahona beach</p>
+              <p><i class="fa-solid fa-stopwatch"></i>&nbsp;3-4 Hours</p>
+            </div>
+            <div class="tourlist-cards__price-info">
+              <p class="price-label">$75</p>
+              <p class="bold">per adult</p>
+              <p class="para-small">Transportation included</p>
+            </div>
+            <p class="tourlist-cards__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              doloremque aliquid deserunt perferendis accusamus. Provident sint
+              beatae quae! Voluptatum sunt non, repellat nostrum architecto
+              soluta pariatur aliquid, voluptate tenetur commodi quam sit quos
+              culpa?<br />Nobis officiis, aliquam itaque laudantium iusto
+              accusantium minima numquam illo odio cum et doloribus corporis rem
+              ipsum fugiat
+              <span class="tourlist-cards__text--extra">
+                fuga officia placeat voluptatibus provident alias autem. Omnis
+                totam illo nostrum dolor! Facilis recusandae unde architecto.<br /><br />Ratione
+                blanditiis consequuntur, amet odit rem ad qui quasi doloremque
+                debitis recusandae. Culpa voluptas vero veniam pariatur
+                voluptates modi molestias quam unde beatae sed repellat
+                consectetur corporis illo voluptatum repellendus veritatis vel
+                esse quo fugit, fugiat sint est quia nesciunt.<br /><br />Aliquam,
+                at fuga! Cupiditate quidem sed odio beatae ad harum ipsam iste
+                suscipit repudiandae consequatur quibusdam, temporibus dolorum
+                ut veniam quaerat blanditiis ducimus expedita nam totam odit
+                tempore! Necessitatibus fuga eligendi quam nobis quasi
+                dolores,<br /><br />mollitia omnis non error repellendus dicta
+                quia magnam quo iusto incidunt voluptatum alias vel hic!
+                Consequatur nisi autem vel aut iste exercitationem veniam
+                reiciendis sed. Impedit consectetur ipsam ab possimus.
+              </span>
+            </p>
+            <div class="tourlist-cards__review-box">
+              <i class="fa-solid fa-spa"></i>&nbsp;
+              <span>
+                <i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star color-prim"></i> </span
+              >&nbsp;
+              <span class="para-small">2536 opinions</span>
+            </div>
+            <div class="tourlist-cards__cta">
+              <div class="tourlist-cards__icon-box">
+                <i class="fa-regular fa-circle-question color-prim"></i
+                >&nbsp;<span>Info</span>
+                &nbsp;&nbsp;
+                <i class="fa-solid fa-photo-film color-prim"></i
+                >&nbsp;<span>Photos</span>&nbsp;&nbsp;
+                <i class="fa-regular fa-map color-prim"></i>&nbsp;<span
+                  >Map</span
+                >
+              </div>
+              <div class="btn-primary tourlist-cards__cta-btn">book now</div>
+            </div>
+          </div>
+        </div>
+        <div class="tourlist-cards__overlay overlay">&nbsp;</div>
+        <div class="tourlist-cards__card">
+          <img
+            src="./assets/img/home-gal-4.jpg"
+            alt="..."
+            class="tourlist-cards__img"
+          />
+          <div class="tourlist-cards__info-box">
+            <p><span class="bold">ROUTE:</span> Barahona - Paraiso</p>
+            <ul class="tourlist-cards__info-box--inner">
+              <li class="tourlist-cards__info-item">
+                <i class="fa-regular fa-clock"></i>&nbsp;
+                <span>Boat riding / Duration: 3-4 hours</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-solid fa-location"></i>&nbsp;
+                <span>Departing from: Barahona LakeHouse</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-solid fa-camera"></i>&nbsp;
+                <span>Panoramic view over the Caribbean Sea</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-solid fa-water"></i>&nbsp;
+                <span>Ride through a river</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-regular fa-flag"></i>&nbsp;
+                <span>Stop at the paprika greenhouse</span>
+              </li>
+            </ul>
+          </div>
+          <div class="tourlist-cards__text-box">
+            <div class="tourlist-cards__trip-info">
+              <h3 class="head-3 tourlist-cards__title">Untouched Paradise</h3>
+              <h4 class="bold">DAYTRIP</h4>
+              <p>Departing from: Barahona Lakehouse</p>
+              <p><i class="fa-solid fa-stopwatch"></i>&nbsp;1-3 Hours</p>
+            </div>
+            <div class="tourlist-cards__price-info">
+              <p class="price-label">$35</p>
+              <p class="bold">per adult</p>
+              <p class="para-small">Transportation included</p>
+            </div>
+            <p class="tourlist-cards__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              doloremque aliquid deserunt perferendis accusamus. Provident sint
+              beatae quae! Voluptatum sunt non, repellat nostrum architecto
+              soluta pariatur aliquid, voluptate tenetur commodi quam sit quos
+              culpa?<br />Nobis officiis, aliquam itaque laudantium iusto
+              accusantium minima numquam illo odio cum et doloribus corporis rem
+              ipsum fugiat
+              <span class="tourlist-cards__text--extra">
+                fuga officia placeat voluptatibus provident alias autem. Omnis
+                totam illo nostrum dolor! Facilis recusandae unde architecto.<br /><br />Ratione
+                blanditiis consequuntur, amet odit rem ad qui quasi doloremque
+                debitis recusandae. Culpa voluptas vero veniam pariatur
+                voluptates modi molestias quam unde beatae sed repellat
+                consectetur corporis illo voluptatum repellendus veritatis vel
+                esse quo fugit, fugiat sint est quia nesciunt.<br /><br />Aliquam,
+                at fuga! Cupiditate quidem sed odio beatae ad harum ipsam iste
+                suscipit repudiandae consequatur quibusdam, temporibus dolorum
+                ut veniam quaerat blanditiis ducimus expedita nam totam odit
+                tempore! Necessitatibus fuga eligendi quam nobis quasi
+                dolores,<br /><br />mollitia omnis non error repellendus dicta
+                quia magnam quo iusto incidunt voluptatum alias vel hic!
+                Consequatur nisi autem vel aut iste exercitationem veniam
+                reiciendis sed. Impedit consectetur ipsam ab possimus.
+              </span>
+            </p>
+            <div class="tourlist-cards__review-box">
+              <i class="fa-solid fa-spa"></i>&nbsp;
+              <span>
+                <i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star-half color-prim"></i> </span
+              >&nbsp;
+              <span class="para-small">1736 opinions</span>
+            </div>
+            <div class="tourlist-cards__cta">
+              <div class="tourlist-cards__icon-box">
+                <i class="fa-regular fa-circle-question color-prim"></i
+                >&nbsp;<span>Info</span>
+                &nbsp;&nbsp;
+                <i class="fa-solid fa-photo-film color-prim"></i
+                >&nbsp;<span>Photos</span>&nbsp;&nbsp;
+                <i class="fa-regular fa-map color-prim"></i>&nbsp;<span
+                  >Map</span
+                >
+              </div>
+              <div class="btn-primary tourlist-cards__cta-btn">book now</div>
+            </div>
+          </div>
+        </div>
+        <div class="tourlist-cards__overlay overlay">&nbsp;</div>
+        <div class="tourlist-cards__card">
+          <img
+            src="./assets/img/home-gal-5.jpg"
+            alt="..."
+            class="tourlist-cards__img"
+          />
+          <div class="tourlist-cards__info-box">
+            <p><span class="bold">ROUTE:</span> Barahona - Paraiso</p>
+            <ul class="tourlist-cards__info-box--inner">
+              <li class="tourlist-cards__info-item">
+                <i class="fa-regular fa-clock"></i>&nbsp;
+                <span>Trekking / Duration: 3-4 hours</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-solid fa-location"></i>&nbsp;
+                <span>Departing from: Barahona</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-solid fa-camera"></i>&nbsp;
+                <span>Panoramic view over the Caribbean Sea</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-solid fa-water"></i>&nbsp;
+                <span>Ride through a river</span>
+              </li>
+              <li class="tourlist-cards__info-item">
+                <i class="fa-regular fa-flag"></i>&nbsp;
+                <span>Stop at the paprika greenhouse</span>
+              </li>
+            </ul>
+          </div>
+          <div class="tourlist-cards__text-box">
+            <div class="tourlist-cards__trip-info">
+              <h3 class="head-3 tourlist-cards__title">Cloudforest Mountain</h3>
+              <h4 class="bold">DAYTRIP</h4>
+              <p>Departing from: Barahona</p>
+              <p><i class="fa-solid fa-stopwatch"></i>&nbsp;1-5 Hours</p>
+            </div>
+            <div class="tourlist-cards__price-info">
+              <p class="price-label">$95</p>
+              <p class="bold">per adult</p>
+              <p class="para-small">Transportation included</p>
+            </div>
+            <p class="tourlist-cards__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              doloremque aliquid deserunt perferendis accusamus. Provident sint
+              beatae quae! Voluptatum sunt non, repellat nostrum architecto
+              soluta pariatur aliquid, voluptate tenetur commodi quam sit quos
+              culpa?<br />Nobis officiis, aliquam itaque laudantium iusto
+              accusantium minima numquam illo odio cum et doloribus corporis rem
+              ipsum fugiat
+              <span class="tourlist-cards__text--extra">
+                fuga officia placeat voluptatibus provident alias autem. Omnis
+                totam illo nostrum dolor! Facilis recusandae unde architecto.<br /><br />Ratione
+                blanditiis consequuntur, amet odit rem ad qui quasi doloremque
+                debitis recusandae. Culpa voluptas vero veniam pariatur
+                voluptates modi molestias quam unde beatae sed repellat
+                consectetur corporis illo voluptatum repellendus veritatis vel
+                esse quo fugit, fugiat sint est quia nesciunt.<br /><br />Aliquam,
+                at fuga! Cupiditate quidem sed odio beatae ad harum ipsam iste
+                suscipit repudiandae consequatur quibusdam, temporibus dolorum
+                ut veniam quaerat blanditiis ducimus expedita nam totam odit
+                tempore! Necessitatibus fuga eligendi quam nobis quasi
+                dolores,<br /><br />mollitia omnis non error repellendus dicta
+                quia magnam quo iusto incidunt voluptatum alias vel hic!
+                Consequatur nisi autem vel aut iste exercitationem veniam
+                reiciendis sed. Impedit consectetur ipsam ab possimus.
+              </span>
+            </p>
+            <div class="tourlist-cards__review-box">
+              <i class="fa-solid fa-spa"></i>&nbsp;
+              <span>
+                <i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star color-prim"></i
+                ><i class="fa-solid fa-star color-prim"></i> </span
+              >&nbsp;
+              <span class="para-small">736 opinions</span>
+            </div>
+            <div class="tourlist-cards__cta">
+              <div class="tourlist-cards__icon-box">
+                <i class="fa-regular fa-circle-question color-prim"></i
+                >&nbsp;<span>Info</span>
+                &nbsp;&nbsp;
+                <i class="fa-solid fa-photo-film color-prim"></i
+                >&nbsp;<span>Photos</span>&nbsp;&nbsp;
+                <i class="fa-regular fa-map color-prim"></i>&nbsp;<span
+                  >Map</span
+                >
+              </div>
+              <div class="btn-primary tourlist-cards__cta-btn">book now</div>
+            </div>
+          </div>
+        </div>
+        <div class="tourlist-cards__overlay overlay">&nbsp;</div>
+      </div>
+
+      <a href="#" class="btn-primary">book now</a>
+    </div>
+    <!-- #SECTION TOURLIST FEATURES-->
+    <div class="tourlist-features">
+      <figure class="figure">
+        <img
+          src="./assets/img/home-gal-8.jpg"
+          alt="ecotourism"
+          class="figure__img"
+        />
+        <figcaption class="figure__caption">
+          <h3 class="head-3">Garden of Eden</h3>
+          <p class="price-label">$55</p>
+          <div class="figure__caption--extra">
+            <p>Departing from: Barahona</p>
+            <p><i class="fa-solid fa-stopwatch"></i>&nbsp;2-3 Hours</p>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="figure">
+        <img
+          src="./assets/img/home-gal-6.jpg"
+          alt="ecotourism"
+          class="figure__img"
+        />
+        <figcaption class="figure__caption">
+          <h3 class="head-3">Mystery Forest</h3>
+          <p class="price-label">$70</p>
+          <div class="figure__caption--extra">
+            <p>Departing from: Baroha</p>
+            <p><i class="fa-solid fa-stopwatch"></i>&nbsp;7-9 Hours</p>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="figure">
+        <img
+          src="./assets/img/home-gal-5.jpg"
+          alt="ecotourism"
+          class="figure__img"
+        />
+        <figcaption class="figure__caption">
+          <h3 class="head-3">Cloudforest Mountain</h3>
+          <p class="price-label">$95</p>
+          <div class="figure__caption--extra">
+            <p>Departing from: Barahona</p>
+            <p><i class="fa-solid fa-stopwatch"></i>&nbsp;3-5 Hours</p>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- #SECTION FOOTER-->
+    <footer class="footer">
+      <div class="footer__item">
+        <img src="./assets/img/logo.webp" alt="logo" class="footer__logo" />
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab enim
+          iusto fugit officia delectus ea maxime deserunt ipsam numquam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+          tempora beatae ex amet quisquam.
+        </p>
+      </div>
+      <div class="footer__item">
+        <h4 class="footer__title">about us</h4>
+        <nav class="footer__nav">
+          <a href="#" class="footer__nav-item">about ecotour</a>
+          <a href="#" class="footer__nav-item">barahona</a>
+          <a href="#" class="footer__nav-item">our team</a>
+          <a href="#" class="footer__nav-item">guestbook</a>
+          <a href="#" class="footer__nav-item">imprint</a>
+        </nav>
+      </div>
+      <div class="footer__item">
+        <h4 class="footer__title">customer service</h4>
+        <nav class="footer__nav">
+          <a href="#" class="footer__nav-item">booking conditions</a>
+          <a href="#" class="footer__nav-item">contact-us</a>
+          <a href="#" class="footer__nav-item">faq's</a>
+          <a href="#" class="footer__nav-item">legal notice</a>
+          <a href="#" class="footer__nav-item">privacy policy</a>
+        </nav>
+      </div>
+      <div class="footer__item">
+        <h4 class="footer__title">reservations & bookings</h4>
+        <p href="#">MONDAY TO FRIDAY<br />from 8:00 am to 8:00 pm</p>
+        <p href="#">SATURDAY TO SUNDAY<br />from 9:00 am to 5:00 pm</p>
+        <p href="#">
+          Atlantic Standard Time<br />
+          +1 (809) 856 2260
+        </p>
+      </div>
+      <div class="footer__item">
+        <h4 class="footer__title">follow us</h4>
+        <div class="footer__social-media">
+          <a href="https://www.facebook.com/"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href="https://www.instagram.com/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.twitter.com/"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

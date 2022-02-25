@@ -1,0 +1,187 @@
+@use "../abstract/variable" as *;
+
+//SECTION BRIEF
+.tourlist-brief {
+  width: 75%;
+  max-width: 120rem;
+  padding: 10rem $pd-container-horizontal;
+  margin: 0 auto;
+  text-align: center;
+
+  > * {
+    margin-bottom: $mgn-vertical-1;
+  }
+}
+
+//SECTION CARDS
+.tourlist-cards {
+  padding: 10rem $pd-container-horizontal;
+  background-color: rgb(233, 233, 233);
+  text-align: center;
+
+  &__card-box {
+    margin-bottom: $mgn-vertical-2;
+  }
+
+  &__card {
+    margin-bottom: $mgn-vertical-1;
+    text-align: initial;
+    position: relative;
+    box-shadow: 0 10px 10px rgba($color: #000000, $alpha: 0.3);
+
+    display: inline-grid;
+    grid-template-columns: 40rem 80rem;
+    grid-template-rows: 30rem;
+  }
+
+  &__img {
+    grid-area: 1 / 1 / 3 / 2;
+    width: 100%;
+    height: 100%;
+    max-height: 40rem;
+  }
+
+  &__info-box {
+    grid-area: 2 / 1 / 3 / 2;
+    display: none;
+    padding: 3rem;
+    background-color: rgb(238, 238, 238);
+
+    &--inner {
+      margin-top: $mgn-vertical-3;
+      list-style: none;
+    }
+  }
+
+  &__info-item {
+    padding: 1.5rem 0;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid darkgrey;
+    }
+  }
+
+  &__text-box {
+    grid-area: 1 / 2 / 3 / 3;
+    padding: 3rem;
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    // grid-template-rows: repeat(2, 1fr);
+  }
+
+  &__title {
+    width: max-content;
+  }
+
+  &__trip-info {
+    grid-area: 1 / 1 / 2 / 2;
+    > * {
+      margin-bottom: $mgn-vertical-4;
+    }
+  }
+
+  &__price-info {
+    grid-area: 1 / 2 / 2 / 3;
+    text-align: right;
+    > * {
+      margin-bottom: $mgn-vertical-4;
+    }
+  }
+
+  &__text {
+    grid-area: 2 / 1 / 3 / 3;
+    padding-left: 2rem;
+    border-left: 2px solid rgb(209, 209, 209);
+
+    &--extra {
+      display: none;
+    }
+
+    &::first-line {
+      font-weight: 500;
+    }
+  }
+
+  &__review-box {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  &__cta {
+    text-align: right;
+    &-btn {
+      display: none;
+    }
+  }
+
+  //HOVER EVENT IMPLEMENTATION
+  &__card:hover {
+    z-index: 20;
+  }
+
+  &__card:hover + &__overlay {
+    display: initial;
+  }
+
+  &__card:hover &__img {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  &__card:hover &__info-box {
+    display: initial;
+  }
+
+  &__card:hover &__text--extra {
+    display: initial;
+  }
+
+  &__card:hover &__icon-box {
+    display: none;
+  }
+
+  &__card:hover &__cta-btn {
+    display: initial;
+  }
+}
+
+//SUB-SECTION TRIPS
+.tourlist {
+  &-trip {
+    width: 20rem;
+    height: 20rem;
+    padding: 1.5rem;
+    background-color: rgb(212, 212, 212);
+
+    &--active {
+      color: white;
+      background-color: $color-primary-dark !important;
+    }
+
+    &:hover {
+      background-color: $color-primary !important;
+    }
+  }
+
+  &-trips {
+    margin: 0 auto $mgn-vertical-2 auto;
+    width: 120rem;
+  }
+}
+
+//SECTION FEATURES
+.tourlist-features {
+  width: 85%;
+  margin: 0 auto;
+  padding: 10rem $pd-container-horizontal;
+  height: 60rem;
+
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+
+  > * {
+    flex: 1;
+  }
+}

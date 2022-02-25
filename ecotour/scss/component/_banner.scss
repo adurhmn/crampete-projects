@@ -41,4 +41,12 @@
       ),
       url(../assets/img/singtour-banner.jpg);
   }
+
+  &--tourlist {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+      ),
+      url(../assets/img/tourlist-banner.jpg);
+  }
 }

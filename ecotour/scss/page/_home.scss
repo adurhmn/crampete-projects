@@ -5,38 +5,8 @@ body {
 }
 
 // SECTION LAYOUT TRIPS
-.trips {
+.home-trips {
   padding: 10rem $pd-container-horizontal;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10vw;
-}
-
-.trip {
-  &__icon-box {
-    height: 12rem;
-    width: 12rem;
-    border-radius: 50%;
-    background-color: rgba($color: $color-primary, $alpha: 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__icon {
-    font-size: 5.5rem;
-    opacity: 0.8;
-  }
-
-  &__text {
-    text-align: center;
-    letter-spacing: 1px;
-    font-family: "Lexend Deca";
-    margin-top: $mgn-vertical-1;
-    text-transform: uppercase;
-  }
 }
 
 // SECTION LAYOUT FEATURE
@@ -94,12 +64,6 @@ body {
     &--8 {
       grid-area: itm-8;
     }
-  }
-
-  &__price {
-    display: inline-block;
-    background-color: $color-primary;
-    padding: 1rem 2rem;
   }
 }
 

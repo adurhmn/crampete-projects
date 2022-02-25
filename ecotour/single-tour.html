@@ -21,7 +21,36 @@
     <!-- #SECTION HEADER-->
     <header class="header">
       <div class="header__nav">
-        <nav class="nav--main"></nav>
+        <div class="header__nav-btn hamburger">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </div>
+        <nav class="nav--main hidden">
+          <span class="nav-close-btn--main">X</span>
+          <p class="nav-item--main nav-item--home" data-page="index">home</p>
+          <p
+            class="nav-item--main nav-item--destination"
+            data-page="destination"
+          >
+            destination
+          </p>
+          <p
+            class="nav-item--main nav-item--private-tour"
+            data-page="private-tour"
+          >
+            private tour
+          </p>
+          <p
+            class="nav-item--main nav-item--single-tour nav-item-active--main"
+            data-page="single-tour"
+          >
+            single tour
+          </p>
+          <p class="nav-item--main nav-item--tour-list" data-page="tour-list">
+            tour list
+          </p>
+        </nav>
       </div>
       <img src="./assets/img/logo.webp" alt="logo" class="header__logo" />
       <a href="#" class="header__btn btn-header">
@@ -39,9 +68,16 @@
     <div class="tabs">
       <h3 class="head-3 tabs__title">Horseback to the mountains of Paraiso</h3>
       <nav class="nav--tabs tabs__nav">
-        <p class="nav-item--tabs nav-item-active--tabs">highlights</p>
-        <p class="nav-item--tabs">description</p>
-        <p class="nav-item--tabs">gallery</p>
+        <p
+          class="nav-item--tabs nav-item--highlights nav-item-active--tabs"
+          id="tab-highlights"
+        >
+          highlights
+        </p>
+        <p class="nav-item--tabs nav-item--description" id="tab-description">
+          description
+        </p>
+        <p class="nav-item--tabs nav-item--gallery" id="tab-gallery">gallery</p>
       </nav>
       <div class="tab tab--highlights">
         <div class="tab__travel-info">
@@ -70,7 +106,7 @@
           </ul>
           <div class="tab__price-box">
             <p class="bold">
-              <span class="tab__price">$60</span>&nbsp;&nbsp;per adult
+              <span class="price-label">$60</span>&nbsp;&nbsp;per adult
             </p>
             <br />
             <p>Guaranteed departure from 2 adults on</p>
@@ -84,6 +120,122 @@
           ></iframe>
         </div>
       </div>
+      <div class="tab tab--description hide-tab">
+        <div class="tab__route-box">
+          <p><span class="bold">ROUTE:</span> Barahona - Paraiso</p>
+          <ul class="tab__route">
+            <li class="tab__route-item">
+              <span class="tab__route-time">1 hour</span>
+              <span class="tab__route-marker"></span>
+              <span class="tab__route-place bold">Barahona</span>
+            </li>
+            <li class="tab__route-item">
+              <span class="tab__route-time">30 min</span>
+              <span class="tab__route-marker"></span>
+              <span class="tab__route-place">Caribbean sea panoramic view</span>
+            </li>
+            <li class="tab__route-item">
+              <span class="tab__route-time">1 hour</span>
+              <span class="tab__route-marker"></span>
+              <span class="tab__route-place">River ride</span>
+            </li>
+            <li class="tab__route-item">
+              <span class="tab__route-time">30 min</span>
+              <span class="tab__route-marker"></span>
+              <span class="tab__route-place">Paprika greenhouse</span>
+            </li>
+            <li class="tab__route-item">
+              <span class="tab__route-place tab__route-place--last bold"
+                >Paraiso</span
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="tab__description-box">
+          <p class="bold">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
+            magnam nisi facere? Beatae recusandae esse vel asperiores sint
+            consequuntur ex, nobis repellendus ab, minus reiciendis.
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum
+            repellendus perferendis vitae possimus est sunt quidem similique id
+            quae dignissimos. Nisi incidunt perferendis maxime in, et iusto non
+            perspiciatis nulla eos voluptatibus quos, corrupti fugiat cum hic
+            doloribus libero debitis neque qui unde labore repellendus,
+            cupiditate praesentium. Incidunt, mollitia modi.
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quos
+            similique facilis architecto assumenda rerum accusantium veritatis
+            et consequuntur ipsum obcaecati placeat illum quo sapiente, natus
+            aut ipsam odit suscipit. Atque neque deleniti explicabo dignissimos?
+            Dolorum, nemo minus. Illo, adipisci.
+          </p>
+          <a href="#" class="btn-primary">book now</a>
+        </div>
+      </div>
+      <div class="tab tab--gallery hide-tab">
+        <div class="tab__gallery-box">
+          <img
+            src="./assets/img/home-gal-4.jpg"
+            alt="..."
+            class="tab__gallery-item"
+          />
+          <img
+            src="./assets/img/home-gal-4.jpg"
+            alt="..."
+            class="tab__gallery-item"
+          />
+          <img
+            src="./assets/img/home-gal-4.jpg"
+            alt="..."
+            class="tab__gallery-item"
+          />
+          <img
+            src="./assets/img/home-gal-4.jpg"
+            alt="..."
+            class="tab__gallery-item"
+          />
+          <img
+            src="./assets/img/home-gal-4.jpg"
+            alt="..."
+            class="tab__gallery-item"
+          />
+          <img
+            src="./assets/img/home-gal-4.jpg"
+            alt="..."
+            class="tab__gallery-item"
+          />
+        </div>
+        <div class="tab__banner">
+          <img
+            src="./assets/img/privtour-banner.jpg"
+            alt="..."
+            class="tab__banner-img"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- #SECTION SLIDE-->
+    <div class="slide">
+      <div class="slide__img-box">
+        <img src="./assets/img/home-gal-1.jpg" alt="" class="slide__img" />
+        <img src="./assets/img/home-gal-2.jpg" alt="" class="slide__img" />
+        <img src="./assets/img/home-gal-3.jpg" alt="" class="slide__img" />
+        <img src="./assets/img/home-gal-4.jpg" alt="" class="slide__img" />
+        <img src="./assets/img/home-gal-5.jpg" alt="" class="slide__img" />
+        <img src="./assets/img/home-gal-6.jpg" alt="" class="slide__img" />
+        <img src="./assets/img/home-gal-7.jpg" alt="" class="slide__img" />
+      </div>
+      <span class="slide__btn slide__btn--left"><</span>
+      <span class="slide__btn slide__btn--right">></span>
+    </div>
+    <!-- #SECTION CTA-BTN-->
+    <div class="singtour-cta-btn-box">
+      <a href="#" class="btn-primary singtour-cta-btn">book now</a>
     </div>
 
     <!-- #SECTION FOOTER-->
@@ -143,5 +295,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/index.js"></script>
+    <script src="js/single-tour.js"></script>
   </body>
 </html>

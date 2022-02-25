@@ -21,7 +21,36 @@
     <!-- #SECTION HEADER-->
     <header class="header">
       <div class="header__nav">
-        <nav class="nav--main"></nav>
+        <div class="header__nav-btn hamburger">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </div>
+        <nav class="nav--main hidden">
+          <span class="nav-close-btn--main">X</span>
+          <p class="nav-item--main nav-item--home" data-page="index">home</p>
+          <p
+            class="nav-item--main nav-item--destination"
+            data-page="destination"
+          >
+            destination
+          </p>
+          <p
+            class="nav-item--main nav-item--private-tour nav-item-active--main"
+            data-page="private-tour"
+          >
+            private tour
+          </p>
+          <p
+            class="nav-item--main nav-item--single-tour"
+            data-page="single-tour"
+          >
+            single tour
+          </p>
+          <p class="nav-item--main nav-item--tour-list" data-page="tour-list">
+            tour list
+          </p>
+        </nav>
       </div>
       <img src="./assets/img/logo.webp" alt="logo" class="header__logo" />
       <a href="#" class="header__btn btn-header">
@@ -89,7 +118,7 @@
         >
       </div>
       <!-- #SUB-SECTION GET STARTED-->
-      <div class="privtour-get-started__popup" id="privtour-popup">
+      <div class="privtour-get-started__popup overlay" id="privtour-popup">
         <form class="popup">
           <div class="popup__header">
             <div class="popup__travel-desc">
@@ -329,32 +358,32 @@
         <h3 class="head-3">Our Guides & Local Experts</h3>
         <div class="privtour-review__staff-box">
           <img
-            src="./assets/img/home-opinion.jpeg"
+            src="./assets/img/home-opinion.jpg"
             alt="ecotour barahona staff"
             class="privtour-review__staff"
           />
           <img
-            src="./assets/img/home-opinion.jpeg"
+            src="./assets/img/home-opinion.jpg"
             alt="ecotour barahona staff"
             class="privtour-review__staff"
           />
           <img
-            src="./assets/img/home-opinion.jpeg"
+            src="./assets/img/home-opinion.jpg"
             alt="ecotour barahona staff"
             class="privtour-review__staff"
           />
           <img
-            src="./assets/img/home-opinion.jpeg"
+            src="./assets/img/home-opinion.jpg"
             alt="ecotour barahona staff"
             class="privtour-review__staff"
           />
           <img
-            src="./assets/img/home-opinion.jpeg"
+            src="./assets/img/home-opinion.jpg"
             alt="ecotour barahona staff"
             class="privtour-review__staff"
           />
           <img
-            src="./assets/img/home-opinion.jpeg"
+            src="./assets/img/home-opinion.jpg"
             alt="ecotour barahona staff"
             class="privtour-review__staff"
           />
@@ -375,11 +404,11 @@
           <h4 class="privtour-review__user-name">john walker</h4>
           <i class="fa-solid fa-spa"></i>&nbsp;
           <span>
-            <i class="fa-solid fa-star privtour-review__icon--star"></i
-            ><i class="fa-solid fa-star privtour-review__icon--star"></i
-            ><i class="fa-solid fa-star privtour-review__icon--star"></i
-            ><i class="fa-solid fa-star privtour-review__icon--star"></i
-            ><i class="fa-solid fa-star privtour-review__icon--star"></i> </span
+            <i class="fa-solid fa-star color-prim"></i
+            ><i class="fa-solid fa-star color-prim"></i
+            ><i class="fa-solid fa-star color-prim"></i
+            ><i class="fa-solid fa-star color-prim"></i
+            ><i class="fa-solid fa-star color-prim"></i> </span
           >&nbsp;
           <span class="para-small">Reviewed 1 week ago</span>
         </div>
@@ -392,12 +421,11 @@
           <div>
             <h4>ECOTOUR BARAHONA</h4>
             <span>
-              <i class="fa-solid fa-star privtour-review__icon--star"></i
-              ><i class="fa-solid fa-star privtour-review__icon--star"></i
-              ><i class="fa-solid fa-star privtour-review__icon--star"></i
-              ><i class="fa-solid fa-star privtour-review__icon--star"></i
-              ><i class="fa-solid fa-star-half privtour-review__icon--star"></i
-              >&nbsp;
+              <i class="fa-solid fa-star color-prim"></i
+              ><i class="fa-solid fa-star color-prim"></i
+              ><i class="fa-solid fa-star color-prim"></i
+              ><i class="fa-solid fa-star color-prim"></i
+              ><i class="fa-solid fa-star-half color-prim"></i>&nbsp;
             </span>
             <span class="para-small privtour-review__brandratingcaption">
               50 reviews
@@ -475,5 +503,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>

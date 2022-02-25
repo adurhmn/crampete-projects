@@ -1,28 +1,47 @@
 @use "../abstract/variable" as *;
 
-.header__nav {
-  width: 3rem;
-  height: 0.4rem;
-  position: relative;
-  background-color: #000;
+.nav--main {
+  height: 100vh;
+  width: 30rem;
+  padding-top: 8vh;
+  font-weight: 500;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  color: white;
+  background-color: $color-primary;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
-  &::before,
-  &::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: inherit;
-    left: 0;
+.nav-item--main {
+  padding: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
   }
 
-  &::before {
-    top: -1rem;
+  &:hover {
+    background-color: rgba($color: $color-primary-dark, $alpha: 0.6);
   }
+}
 
-  &::after {
-    bottom: -1rem;
-  }
+.nav-close-btn--main {
+  background-color: rgba(205, 50, 50);
+  padding: 1rem;
+  line-height: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.nav-item-active--main {
+  background-color: $color-primary-dark;
 }
 
 .nav--tabs {
@@ -38,6 +57,7 @@
   letter-spacing: 1px;
   padding: 1rem 0.3rem;
   border-bottom: 3px solid transparent;
+  cursor: pointer;
 }
 
 .nav-item-active--tabs {

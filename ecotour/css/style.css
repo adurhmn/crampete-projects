@@ -61,6 +61,25 @@ body {
   align-items: center;
   justify-content: space-around;
 }
+
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  display: block;
+  width: 3rem;
+  height: 0.4rem;
+  background-color: #000;
+}
+.hamburger-top:not(:last-child),
+.hamburger-middle:not(:last-child),
+.hamburger-bottom:not(:last-child) {
+  margin-bottom: 0.6rem;
+}
+
 .footer {
   text-align: center;
   color: #fff;
@@ -118,10 +137,14 @@ body {
 .banner--singtour {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url(../assets/img/singtour-banner.jpg);
 }
+.banner--tourlist {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url(../assets/img/tourlist-banner.jpg);
+}
 
 .btn-header,
 .btn-primary,
 .btn-secondary {
+  display: inline-block;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.3rem;
@@ -158,25 +181,46 @@ body {
   color: #363636;
 }
 
-.header__nav {
-  width: 3rem;
-  height: 0.4rem;
-  position: relative;
-  background-color: #000;
-}
-.header__nav::before, .header__nav::after {
-  content: "";
-  width: 100%;
-  height: 100%;
+.nav--main {
+  height: 100vh;
+  width: 30rem;
+  padding-top: 8vh;
+  font-weight: 500;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  color: white;
+  background-color: #9fcd32;
   position: absolute;
-  background-color: inherit;
+  top: 0;
   left: 0;
 }
-.header__nav::before {
-  top: -1rem;
+
+.nav-item--main {
+  padding: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+  cursor: pointer;
 }
-.header__nav::after {
-  bottom: -1rem;
+.nav-item--main:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.nav-item--main:hover {
+  background-color: rgba(65, 119, 3, 0.6);
+}
+
+.nav-close-btn--main {
+  background-color: #cd3232;
+  padding: 1rem;
+  line-height: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.nav-item-active--main {
+  background-color: #417703;
 }
 
 .nav--tabs {
@@ -191,6 +235,7 @@ body {
   letter-spacing: 1px;
   padding: 1rem 0.3rem;
   border-bottom: 3px solid transparent;
+  cursor: pointer;
 }
 
 .nav-item-active--tabs {
@@ -337,6 +382,35 @@ body {
   filter: brightness(40%);
 }
 
+.trips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10vw;
+}
+
+.trip__icon-box {
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  background-color: rgba(159, 205, 50, 0.3);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trip__icon {
+  font-size: 5.5rem;
+  opacity: 0.8;
+}
+.trip__text {
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: "Lexend Deca";
+  margin-top: 1.2rem;
+  text-transform: uppercase;
+}
+
 .info {
   position: relative;
   height: 40vw;
@@ -400,37 +474,31 @@ body {
   transform: translate(-50%, 50%);
 }
 
+.price-label {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  background-color: #9fcd32;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
 body {
   background-color: #f8f8f8;
 }
 
-.trips {
+.home-trips {
   padding: 10rem 7vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10vw;
-}
-
-.trip__icon-box {
-  height: 12rem;
-  width: 12rem;
-  border-radius: 50%;
-  background-color: rgba(159, 205, 50, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.trip__icon {
-  font-size: 5.5rem;
-  opacity: 0.8;
-}
-.trip__text {
-  text-align: center;
-  letter-spacing: 1px;
-  font-family: "Lexend Deca";
-  margin-top: 2.5rem;
-  text-transform: uppercase;
 }
 
 .home-feature {
@@ -471,11 +539,6 @@ body {
 }
 .home-gallery__item--8 {
   grid-area: itm-8;
-}
-.home-gallery__price {
-  display: inline-block;
-  background-color: #9fcd32;
-  padding: 1rem 2rem;
 }
 
 .home-intro {
@@ -655,21 +718,11 @@ body {
   margin-bottom: 6rem;
 }
 .privtour-get-started__popup {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: all 0.4s;
-  display: none;
   align-items: center;
   justify-content: center;
 }
 .privtour-get-started__popup:target {
   display: flex;
-  opacity: 1;
 }
 
 .privtour-feature {
@@ -751,9 +804,6 @@ body {
 .privtour-review__icon--quote {
   font-size: 5rem;
 }
-.privtour-review__icon--star {
-  color: #417703;
-}
 .privtour-review__icon--brand {
   height: 6rem;
 }
@@ -768,7 +818,8 @@ body {
   margin-bottom: 2.5rem;
 }
 
-.tab--highlights {
+.tab {
+  height: 52rem;
   display: flex;
   gap: 3rem;
 }
@@ -794,12 +845,6 @@ body {
   padding: 2rem;
   margin-top: 1.2rem;
 }
-.tab__price {
-  font-size: 1.8rem;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  background-color: #9fcd32;
-}
 .tab__travel-map {
   flex: 1;
 }
@@ -809,8 +854,290 @@ body {
   height: 100%;
 }
 
+.tab__route-box {
+  flex: 0 0 35rem;
+  padding: 3rem;
+  background-color: #eeeeee;
+}
+.tab__route {
+  margin-top: 2.5rem;
+  list-style: none;
+}
+.tab__route-item:not(:last-child) {
+  height: 8rem;
+  margin-bottom: 0.6rem;
+  display: grid;
+  grid-template-columns: 30% 10% 1fr;
+}
+.tab__route-item:last-child {
+  margin-left: 40%;
+}
+.tab__route-time {
+  align-self: center;
+  text-align: right;
+  margin-right: 2rem;
+  color: #9fcd32;
+  font-weight: bold;
+}
+.tab__route-marker {
+  position: relative;
+}
+.tab__route-marker::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  background-color: #9fcd32;
+}
+.tab__route-marker::after {
+  content: "";
+  width: 2px;
+  height: 7rem;
+  position: absolute;
+  left: 0.4rem;
+  top: 1rem;
+  background-color: #9fcd32;
+}
+.tab__route-place--last {
+  position: relative;
+}
+.tab__route-place--last::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  left: -53%;
+  top: 0;
+  border-radius: 50%;
+  background-color: #9fcd32;
+}
+.tab__description-box {
+  flex: 1;
+}
+.tab__description-box > :last-child {
+  margin-top: 6rem;
+}
+
+.tab__gallery-box {
+  flex: 0 0 35rem;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 2px;
+}
+.tab__gallery-item {
+  width: 100%;
+  height: 100%;
+}
+.tab__banner {
+  flex: 1;
+}
+.tab__banner-img {
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  position: relative;
+  overflow: hidden;
+}
+.slide__img-box {
+  height: 25vw;
+  width: max-content;
+  display: flex;
+  position: relative;
+}
+.slide__img {
+  height: 100%;
+  flex: 0 0 50vw;
+}
+.slide__btn {
+  color: #417703;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 2rem;
+  line-height: 1;
+  background-color: #9fcd32;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+.slide__btn--left {
+  left: 9rem;
+}
+.slide__btn--right {
+  right: 5rem;
+}
+
+.singtour-cta-btn-box {
+  text-align: center;
+}
+
+.singtour-cta-btn {
+  margin: 6rem auto;
+  text-align: center;
+}
+
+.tourlist-brief {
+  width: 75%;
+  max-width: 120rem;
+  padding: 10rem 7vw;
+  margin: 0 auto;
+  text-align: center;
+}
+.tourlist-brief > * {
+  margin-bottom: 2.5rem;
+}
+
+.tourlist-cards {
+  padding: 10rem 7vw;
+  background-color: #e9e9e9;
+  text-align: center;
+}
+.tourlist-cards__card-box {
+  margin-bottom: 6rem;
+}
+.tourlist-cards__card {
+  margin-bottom: 2.5rem;
+  text-align: initial;
+  position: relative;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  display: inline-grid;
+  grid-template-columns: 40rem 80rem;
+  grid-template-rows: 30rem;
+}
+.tourlist-cards__img {
+  grid-area: 1/1/3/2;
+  width: 100%;
+  height: 100%;
+  max-height: 40rem;
+}
+.tourlist-cards__info-box {
+  grid-area: 2/1/3/2;
+  display: none;
+  padding: 3rem;
+  background-color: #eeeeee;
+}
+.tourlist-cards__info-box--inner {
+  margin-top: 1.2rem;
+  list-style: none;
+}
+.tourlist-cards__info-item {
+  padding: 1.5rem 0;
+}
+.tourlist-cards__info-item:not(:last-child) {
+  border-bottom: 2px solid darkgrey;
+}
+.tourlist-cards__text-box {
+  grid-area: 1/2/3/3;
+  padding: 3rem;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.tourlist-cards__title {
+  width: max-content;
+}
+.tourlist-cards__trip-info {
+  grid-area: 1/1/2/2;
+}
+.tourlist-cards__trip-info > * {
+  margin-bottom: 0.5rem;
+}
+.tourlist-cards__price-info {
+  grid-area: 1/2/2/3;
+  text-align: right;
+}
+.tourlist-cards__price-info > * {
+  margin-bottom: 0.5rem;
+}
+.tourlist-cards__text {
+  grid-area: 2/1/3/3;
+  padding-left: 2rem;
+  border-left: 2px solid #d1d1d1;
+}
+.tourlist-cards__text--extra {
+  display: none;
+}
+.tourlist-cards__text::first-line {
+  font-weight: 500;
+}
+.tourlist-cards__review-box {
+  grid-area: 3/1/4/2;
+}
+.tourlist-cards__cta {
+  text-align: right;
+}
+.tourlist-cards__cta-btn {
+  display: none;
+}
+.tourlist-cards__card:hover {
+  z-index: 20;
+}
+.tourlist-cards__card:hover + .tourlist-cards__overlay {
+  display: initial;
+}
+.tourlist-cards__card:hover .tourlist-cards__img {
+  grid-area: 1/1/2/2;
+}
+.tourlist-cards__card:hover .tourlist-cards__info-box {
+  display: initial;
+}
+.tourlist-cards__card:hover .tourlist-cards__text--extra {
+  display: initial;
+}
+.tourlist-cards__card:hover .tourlist-cards__icon-box {
+  display: none;
+}
+.tourlist-cards__card:hover .tourlist-cards__cta-btn {
+  display: initial;
+}
+
+.tourlist-trip {
+  width: 20rem;
+  height: 20rem;
+  padding: 1.5rem;
+  background-color: #d4d4d4;
+}
+.tourlist-trip--active {
+  color: white;
+  background-color: #417703 !important;
+}
+.tourlist-trip:hover {
+  background-color: #9fcd32 !important;
+}
+.tourlist-trips {
+  margin: 0 auto 6rem auto;
+  width: 120rem;
+}
+
+.tourlist-features {
+  width: 85%;
+  margin: 0 auto;
+  padding: 10rem 7vw;
+  height: 60rem;
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+.tourlist-features > * {
+  flex: 1;
+}
+
 .bold {
-  font-weight: 600;
+  font-weight: 600 !important;
+}
+
+.color-prim {
+  color: #417703 !important;
+}
+
+.hidden {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,13 @@
+@use "../abstract/variable" as *;
+
 .bold {
-  font-weight: 600;
+  font-weight: 600 !important;
+}
+
+.color-prim {
+  color: $color-primary-dark !important;
+}
+
+.hidden {
+  display: none !important;
 }
