@@ -41,15 +41,16 @@
   align-items: center;
 
   &__text-content {
-    width: 65%;
+    flex-basis: 65%;
     max-width: 50rem;
     > *:not(:last-child) {
       margin-bottom: $mgn-vertical-1;
     }
   }
   &__map {
-    width: 25%;
+    flex-basis: 25%;
   }
+
   &__map-img {
     width: 100%;
     margin-bottom: $mgn-vertical-2;
@@ -89,7 +90,7 @@
   background-position: bottom center;
 
   &__text {
-    width: 60%;
+    max-width: 80rem;
     margin: 0 auto;
   }
 }
@@ -115,5 +116,11 @@
   .dest-brief-3 {
     padding-top: 8rem;
     padding-bottom: 8rem;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-3) {
+  .geography {
+    flex-direction: column;
   }
 }
