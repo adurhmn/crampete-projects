@@ -151,19 +151,11 @@ body {
 
     &-gallery {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(12, 11vw);
+      grid-template-rows: repeat(4, 33vw);
       grid-template-areas:
         "itm-1 itm-2"
-        "itm-1 itm-2"
-        "itm-1 itm-2"
-        "itm-3 itm-4"
-        "itm-3 itm-4"
         "itm-3 itm-4"
         "itm-5 itm-6"
-        "itm-5 itm-6"
-        "itm-5 itm-6"
-        "itm-7 itm-8"
-        "itm-7 itm-8"
         "itm-7 itm-8";
     }
 
@@ -178,6 +170,31 @@ body {
     &__icon {
       padding: 1.5rem;
       font-size: 3.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-3) {
+  .home {
+    &-gallery {
+      grid-template-rows: repeat(4, 45vw);
+    }
+  }
+
+  .opinion {
+    flex-direction: column;
+
+    > * {
+      flex-basis: initial;
+      text-align: center;
+    }
+
+    &__img {
+      margin-bottom: 3.5rem;
+    }
+
+    &__text-content {
+      text-align: left;
     }
   }
 }

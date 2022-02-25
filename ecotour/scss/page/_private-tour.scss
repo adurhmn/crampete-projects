@@ -5,7 +5,7 @@
   padding: 12rem $pd-container-horizontal;
 
   &__text-content {
-    width: 60%;
+    max-width: 60rem;
     margin: 0 auto;
     text-align: center;
   }
@@ -218,6 +218,18 @@
 
     &__brand-review {
       justify-content: center;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-3) {
+  .privtour-gallery {
+    grid-template-rows: repeat(3, 50vw);
+  }
+
+  .privtour-review {
+    &__staff-box {
+      grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
     }
   }
 }

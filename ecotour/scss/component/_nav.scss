@@ -9,9 +9,10 @@
   letter-spacing: 1px;
   color: white;
   background-color: $color-primary;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: 30;
 }
 
 .nav-item--main {
