@@ -203,3 +203,21 @@ body {
     }
   }
 }
+
+@media only screen and (max-width: $breakpoint-4) {
+  .home {
+    &-gallery {
+      grid-template-columns: auto;
+      grid-template-rows: repeat(8, 30rem);
+      grid-template-areas:
+        "itm-1"
+        "itm-2"
+        "itm-3"
+        "itm-4"
+        "itm-5"
+        "itm-6"
+        "itm-7"
+        "itm-8";
+    }
+  }
+}

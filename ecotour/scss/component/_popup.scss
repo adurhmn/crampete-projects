@@ -3,6 +3,7 @@
 .popup {
   width: 80%;
   max-width: 110rem;
+  max-height: 95vh;
   position: relative;
 
   &__header {
@@ -25,7 +26,6 @@
     row-gap: 2rem;
     align-items: start;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 5vw);
     grid-template-areas:
       "fname lname mail phone"
       "msg msg msg country"
@@ -118,18 +118,12 @@
 @media only screen and (max-width: $breakpoint-1) {
   .popup {
     width: 90%;
-
-    &__body {
-      grid-template-rows: repeat(4, 7vw);
-    }
   }
 }
 
 @media only screen and (max-width: $breakpoint-2) {
   .popup {
     &__body {
-      // grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(5, 1fr);
       grid-template-areas:
         "fname fname lname lname"
         "mail mail phone phone"
@@ -151,13 +145,31 @@
 
 @media only screen and (max-width: $breakpoint-3) {
   .popup {
-    // &__header {
-    //   > * {
-    //     flex-basis: 100%;
-    //   }
-    // }
     &__travel-date {
       flex-basis: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-4) {
+  .popup {
+    &__travel-adult,
+    &__travel-child {
+      flex-basis: 100%;
+    }
+
+    &__body {
+      grid-template-columns: initial;
+      grid-template-areas:
+        "fname"
+        "lname"
+        "mail"
+        "phone"
+        "country"
+        "msg"
+        "msg"
+        "agreement"
+        "btn";
     }
   }
 }

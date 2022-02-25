@@ -63,5 +63,17 @@
 
 .nav-item-active--tabs {
   font-weight: 500;
-  border-color: $color-primary;
+  border-color: $color-primary !important;
+}
+
+@media only screen and (max-width: $breakpoint-4) {
+  .nav--tabs {
+    flex-direction: column;
+  }
+
+  .nav-item--tabs {
+    padding: 1rem;
+    border-bottom: 0;
+    border-left: 3px solid transparent;
+  }
 }

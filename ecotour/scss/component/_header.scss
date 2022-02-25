@@ -37,9 +37,16 @@
     }
     &__logo {
       grid-area: 2 / 1 / 3 / 3;
+      height: 6rem;
     }
     &__btn {
       grid-area: 1 / 2 / 2 / 3;
     }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-4) {
+  .header__logo {
+    height: 4rem;
   }
 }
