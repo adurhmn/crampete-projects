@@ -8,8 +8,11 @@
   &__header {
     background-color: $color-primary;
     padding: 2.5rem;
+
     display: flex;
     gap: 2vw;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__body {
@@ -18,7 +21,8 @@
     background-color: rgb(226, 224, 224);
 
     display: grid;
-    gap: 2vw;
+    column-gap: 2vw;
+    row-gap: 2rem;
     align-items: start;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 5vw);
@@ -29,8 +33,16 @@
       "msg msg msg btn";
   }
 
-  &__travel-desc {
-    flex-basis: 50%;
+  &__travel {
+    &-desc {
+      flex-basis: 40%;
+    }
+
+    &-date,
+    &-adult,
+    &-child {
+      flex: 1;
+    }
   }
 
   &__field-title {
@@ -100,5 +112,39 @@
     position: absolute;
     right: 0;
     top: 0;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-1) {
+  .popup {
+    width: 90%;
+
+    &__body {
+      grid-template-rows: repeat(4, 7vw);
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-2) {
+  .popup {
+    &__body {
+      // grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-areas:
+        "fname fname lname lname"
+        "mail mail phone phone"
+        "msg msg country country"
+        "msg msg agreement agreement"
+        "btn btn btn btn";
+      align-items: center;
+    }
+
+    &__cust-btn {
+      width: 100%;
+    }
+
+    &__travel-desc {
+      flex-basis: 100%;
+    }
   }
 }

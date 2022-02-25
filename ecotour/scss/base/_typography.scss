@@ -1,3 +1,5 @@
+@use "../abstract/variable" as *;
+
 body {
   font-family: "Lexend Deca", sans-serif;
   font-size: 1.4rem;
@@ -34,4 +36,14 @@ body {
 .para-small {
   font-size: 1.1rem;
   opacity: 0.7;
+}
+
+@media only screen and (max-width: $breakpoint-2) {
+  .head-1 {
+    font-size: 4rem;
+  }
+
+  .head-2 {
+    font-size: 2rem;
+  }
 }

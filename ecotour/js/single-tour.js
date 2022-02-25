@@ -41,9 +41,9 @@ const changeTab = function (tabName) {
 // displays chosen tab and hides others
 const switchTab = function (tabName) {
   for (const tab of document.querySelectorAll(".tab")) {
-    tab.classList.add("hide-tab");
+    tab.classList.add("hidden");
   }
-  document.querySelector(`.tab--${tabName}`).classList.remove("hide-tab");
+  document.querySelector(`.tab--${tabName}`).classList.remove("hidden");
 };
 
 for (let tab of tabs) {
@@ -68,7 +68,7 @@ document
   .querySelector(".slide__btn--right")
   .addEventListener("click", function () {
     let currentRight = Number(imgBox.style.right.split("px")[0]);
-    if (currentRight < upperLimit - 100) {
+    if (currentRight < upperLimit - 50) {
       //extra 100px is margin for error
       imgBox.style.right = `${currentRight + moveWidth}px`;
     }

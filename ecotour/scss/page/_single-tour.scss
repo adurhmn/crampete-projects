@@ -71,16 +71,14 @@
     margin-top: $mgn-vertical-1;
     list-style: none;
 
-    &-item:not(:last-child) {
-      height: 8rem;
-      margin-bottom: 0.6rem;
-
+    &-item {
       display: grid;
       grid-template-columns: 30% 10% 1fr;
-    }
 
-    &-item:last-child {
-      margin-left: 40%;
+      &:not(:last-child) {
+        height: 8rem;
+        margin-bottom: 0.6rem;
+      }
     }
 
     &-time {
@@ -114,20 +112,9 @@
         top: 1rem;
         background-color: $color-primary;
       }
-    }
 
-    &-place--last {
-      position: relative;
-
-      &::before {
-        content: "";
-        width: 1rem;
-        height: 1rem;
-        position: absolute;
-        left: -53%;
-        top: 0;
-        border-radius: 50%;
-        background-color: $color-primary;
+      &--end::after {
+        content: none;
       }
     }
   }
@@ -145,9 +132,14 @@
 .tab {
   &__gallery-box {
     flex: 0 0 35rem;
+    height: 52rem;
 
     display: grid;
     grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(
+      3,
+      17.333333rem
+    ); // 52rem(total height) / 3 = 17.3333333
     gap: 2px;
   }
 
@@ -173,10 +165,10 @@
 
   &__img-box {
     height: 25vw;
+    min-height: 20rem;
     width: max-content;
 
     display: flex;
-    // gap: 2px;
     position: relative;
   }
 
@@ -195,15 +187,16 @@
     background-color: $color-primary;
     position: absolute;
     top: 50%;
-    transform: translateX(-50%);
+    transform: translateY(-50%);
     border-radius: 20px;
+    cursor: pointer;
 
     &--left {
-      left: 9rem;
+      left: 3rem;
     }
 
     &--right {
-      right: 5rem;
+      right: 3rem;
     }
   }
 }
@@ -216,4 +209,11 @@
 .singtour-cta-btn {
   margin: $mgn-vertical-2 auto;
   text-align: center;
+}
+
+@media only screen and (max-width: $breakpoint-2) {
+  .tab {
+    flex-direction: column;
+    height: 100rem;
+  }
 }

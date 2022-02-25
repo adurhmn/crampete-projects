@@ -51,7 +51,7 @@
     top: 50%;
     transform: translateY(-50%);
     left: 8vw;
-    padding: 5rem;
+    padding: 3vw 3vw 6rem 3vw;
     width: 40%;
     z-index: 10;
 
@@ -78,8 +78,6 @@
 //SECTION - GUIDE
 .guide {
   padding: 6vw;
-  // width: 80%;
-  margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(50px);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
@@ -128,4 +126,51 @@
   top: 0;
   left: 0;
   z-index: 10;
+}
+
+@media only screen and (max-width: $breakpoint-1) {
+  .info {
+    &__item--primary {
+      width: 50%;
+      left: 4vw;
+
+      > *:not(:last-child) {
+        margin-bottom: $mgn-vertical-3;
+      }
+    }
+
+    &__item--secondary {
+      right: 4vw;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-2) {
+  .info {
+    width: calc(100% - 12vw); //12vw is 2*$pd-container-horizontal
+    height: 50vw;
+    margin: 0 auto calc(40vw + 8rem) auto;
+
+    &__item--primary {
+      width: 90%;
+      height: 80%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__item--secondary {
+      width: 100%;
+      height: 40vw;
+      top: initial;
+      left: 0;
+      bottom: -40vw;
+      transform: translate(0, 0);
+    }
+  }
+
+  .guide {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
 }

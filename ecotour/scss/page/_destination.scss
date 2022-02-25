@@ -4,7 +4,8 @@
 .dest-brief {
   text-align: center;
   padding: 10rem $pd-container-horizontal;
-  width: 80rem;
+  width: 90%;
+  max-width: 80rem;
   margin: 0 auto;
 
   > * {
@@ -35,12 +36,13 @@
   padding: 10rem $pd-container-horizontal;
 
   display: flex;
-  gap: 3vw;
+  gap: 5vw;
   justify-content: center;
   align-items: center;
 
   &__text-content {
-    max-width: 50%;
+    width: 65%;
+    max-width: 50rem;
     > *:not(:last-child) {
       margin-bottom: $mgn-vertical-1;
     }
@@ -104,5 +106,14 @@
   &__text {
     columns: 2;
     gap: 2vw;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-2) {
+  .dest-brief,
+  .dest-brief-2,
+  .dest-brief-3 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 }

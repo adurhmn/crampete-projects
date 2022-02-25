@@ -6,14 +6,13 @@
   background-color: $color-primary-dark;
   padding: 10rem $pd-container-horizontal;
 
-  display: flex;
-  gap: 3vw;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  column-gap: 5vw;
+  row-gap: 6rem;
+  justify-items: center;
 
   &__item {
-    flex: 0 1 30rem;
-    max-width: 30rem;
-
     > :not(:last-child) {
       margin-bottom: $mgn-vertical-1;
     }

@@ -5,7 +5,7 @@
   color: #fff;
   background-position: center;
 
-  > * {
+  > :not(:last-child) {
     margin-bottom: $mgn-vertical-1;
   }
 
@@ -48,5 +48,11 @@
         rgba(0, 0, 0, 0.3) 100%
       ),
       url(../assets/img/tourlist-banner.jpg);
+  }
+}
+
+@media only screen and (max-width: $breakpoint-2) {
+  .banner {
+    padding: 8rem 7vw;
   }
 }
