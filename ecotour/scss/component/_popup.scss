@@ -148,3 +148,16 @@
     }
   }
 }
+
+@media only screen and (max-width: $breakpoint-3) {
+  .popup {
+    // &__header {
+    //   > * {
+    //     flex-basis: 100%;
+    //   }
+    // }
+    &__travel-date {
+      flex-basis: 100%;
+    }
+  }
+}

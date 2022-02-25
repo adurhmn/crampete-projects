@@ -2,10 +2,9 @@
 
 //SECTION BRIEF
 .tourlist-brief {
-  width: 75%;
   max-width: 120rem;
-  padding: 10rem $pd-container-horizontal;
   margin: 0 auto;
+  padding: 10rem $pd-container-horizontal;
   text-align: center;
 
   > * {
@@ -68,8 +67,11 @@
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "t-info p-info"
+      "textt textt"
+      "r-box cta";
     row-gap: 3rem;
-    // grid-template-rows: repeat(2, 1fr);
   }
 
   &__title {
@@ -77,14 +79,14 @@
   }
 
   &__trip-info {
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: t-info;
     > * {
       margin-bottom: $mgn-vertical-4;
     }
   }
 
   &__price-info {
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: p-info;
     text-align: right;
     > * {
       margin-bottom: $mgn-vertical-4;
@@ -92,7 +94,7 @@
   }
 
   &__text {
-    grid-area: 2 / 1 / 3 / 3;
+    grid-area: textt;
     padding-left: 2rem;
     border-left: 2px solid rgb(209, 209, 209);
 
@@ -106,10 +108,11 @@
   }
 
   &__review-box {
-    grid-area: 3 / 1 / 4 / 2;
+    grid-area: r-box;
   }
 
   &__cta {
+    grid-area: cta;
     text-align: right;
     &-btn {
       display: none;
@@ -240,31 +243,28 @@
   }
   .tourlist-cards {
     &__text-box {
-      grid-template-columns: repeat(2, 50%);
-      // gap: 2rem;
+      grid-template-columns: auto;
     }
 
-    // &__trip-info {
-    //   grid-area: 1 / 1 / 2 / 2;
-    // }
+    &__text-box {
+      grid-template-areas:
+        "t-info"
+        "p-info"
+        "textt"
+        "r-box"
+        "cta";
+      text-align: center;
+    }
 
-    // &__price-info {
-    //   grid-area: 2 / 1 / 3 / 2;
-    // }
+    &__price-info,
+    &__cta {
+      text-align: center;
+    }
 
-    // &__text {
-    //   grid-area: 3 / 1 / 4 / 2;
-    // }
-
-    // &__review-box {
-    //   grid-area: 4 / 1 / 5 / 2;
-    //   text-align: center;
-    // }
-
-    // &__cta {
-    //   grid-area: 5 / 1 / 6 / 2;
-    //   text-align: center;
-    // }
+    &__title {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   .tourlist-features {

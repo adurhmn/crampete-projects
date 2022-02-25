@@ -176,8 +176,13 @@ body {
 
 @media only screen and (max-width: $breakpoint-3) {
   .home {
+    &-feature {
+      padding-left: 3vw;
+      padding-left: 3vw;
+    }
+
     &-gallery {
-      grid-template-rows: repeat(4, 45vw);
+      grid-template-rows: repeat(4, 55vw);
     }
   }
 

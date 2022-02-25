@@ -56,3 +56,9 @@
     padding: 8rem 7vw;
   }
 }
+
+@media only screen and (max-width: $breakpoint-3) {
+  .banner {
+    text-align: center;
+  }
+}
