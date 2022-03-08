@@ -160,22 +160,18 @@
 
 //SECTION SLIDE
 .slide {
+  height: 25vw;
+  min-height: 20rem;
   position: relative;
-  overflow: hidden;
-
-  &__img-box {
-    height: 25vw;
-    min-height: 20rem;
-    width: max-content;
-
-    display: flex;
-    position: relative;
-  }
+  white-space: nowrap;
 
   &__img {
+    position: absolute;
     height: 100%;
-    // flex: 0 0 70rem;
-    flex: 0 0 50vw;
+    width: 50vw;
+    top: 0;
+    left: 0;
+    transition: transform 0.4s ease-in-out;
   }
 
   &__btn {

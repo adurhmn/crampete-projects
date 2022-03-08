@@ -1,75 +1,33 @@
-//////////////////////////////////////////////
-//INITIALIZATION
-//////////////////////////////////////////////
-let imgBox = document.querySelector(".slide__img-box");
-let imgWidth = document
-  .querySelector(".slide__img")
-  .getBoundingClientRect()
-  .width.toFixed(2); //px
-let moveWidth = imgWidth / 2; //px
-let totalImages = document.querySelectorAll(".slide__img").length;
-let viewPortwidth = window.innerWidth;
-let imgBoxWidth = totalImages * imgWidth;
-let upperLimit = imgBoxWidth - viewPortwidth;
-imgBox.style.right = "0px";
+"use strict";
 
-const tabs = document.querySelectorAll(".nav-item--tabs");
+const slides = document.querySelectorAll(".slide__img");
+let currentSlide = 0;
 
-//////////////////////////////////////////////
-//EVENT LISTENERS
-//////////////////////////////////////////////
-//SUB-SECTION TABS
-// for (let i = 0; i < tabs.length; i++) {
-//   document
-//     .querySelector(".nav-item--highlights")
-//     .addEventListener("click", function () {
-//       changeTab("highlights");
-//     });
-// }
-const getTabName = (tab) => tab.getAttribute("id").split("-")[1];
+//slider movement
+const moveSlide = function () {
+  slides.forEach((slide, i) => {
+    slide.style.transform = `translateX(${(i - currentSlide) * 100}%)`;
+  });
+};
+moveSlide();
 
-// highlights chosen tab in navbar
-const changeTab = function (tabName) {
-  for (const tab of tabs) {
-    tab.classList.remove("nav-item-active--tabs");
-  }
-  document
-    .querySelector(`.nav-item--${tabName}`)
-    .classList.add("nav-item-active--tabs");
+// arrow implementation
+const moveRight = function () {
+  if (currentSlide === slides.length - 2) currentSlide = 0;
+  //-2 here because slider displays two images at a time. it should be 1 for classic one img sliders
+  else currentSlide++;
+  moveSlide();
 };
 
-// displays chosen tab and hides others
-const switchTab = function (tabName) {
-  for (const tab of document.querySelectorAll(".tab")) {
-    tab.classList.add("hidden");
-  }
-  document.querySelector(`.tab--${tabName}`).classList.remove("hidden");
+const moveLeft = function () {
+  if (currentSlide === 0) currentSlide = slides.length - 2;
+  //-2 here because slider displays two images at a time. it should be 1 for classic one img sliders
+  else currentSlide--;
+  moveSlide();
 };
-
-for (let tab of tabs) {
-  tab.addEventListener("click", function () {
-    changeTab(getTabName(tab));
-    switchTab(getTabName(tab));
-  });
-}
-
-//SUB-SECTION SLIDE-GALLERY
-document
-  .querySelector(".slide__btn--left")
-  .addEventListener("click", function () {
-    let currentRight = Number(imgBox.style.right.split("px")[0]);
-    if (currentRight > moveWidth - 50) {
-      //extra 50px is margin for error
-      imgBox.style.right = `${currentRight - moveWidth}px`;
-    }
-  });
 
 document
   .querySelector(".slide__btn--right")
-  .addEventListener("click", function () {
-    let currentRight = Number(imgBox.style.right.split("px")[0]);
-    if (currentRight < upperLimit - 50) {
-      //extra 100px is margin for error
-      imgBox.style.right = `${currentRight + moveWidth}px`;
-    }
-  });
+  .addEventListener("click", moveRight);
+
+document.querySelector(".slide__btn--left").addEventListener("click", moveLeft);
