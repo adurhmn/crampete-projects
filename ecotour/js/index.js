@@ -23,32 +23,13 @@ for (let item of navItems) {
   });
 }
 
-// const goToPage = (pageName) => {
-//   console.log(pageName);
-// };
-
-// document
-//   .querySelector(".nav-item--home")
-//   .addEventListener("click", function () {
-//     location.replace("index" + ".html");
-//   });
-// document
-//   .querySelector(".nav-item--destination")
-//   .addEventListener("click", function () {
-//     location.replace("destination" + ".html");
-//   });
-// document
-//   .querySelector(".nav-item--private-tour")
-//   .addEventListener("click", function () {
-//     location.replace("private-tour" + ".html");
-//   });
-// document
-//   .querySelector(".nav-item--single-tour")
-//   .addEventListener("click", function () {
-//     goToPage("single-tour");
-//   });
-// document
-//   .querySelector(".nav-item--tour-list")
-//   .addEventListener("click", function () {
-//     goToPage("tour-list");
-//   });
+/////////////////////////////////
+/// BANNER LOAD HANDLER (RESPONSIVE BANNER)
+/////////////////////////////////
+window.addEventListener("load", () => {
+  const lazyLoad = document.querySelector(".lazy-load");
+  lazyLoad.src = lazyLoad.dataset.src;
+  lazyLoad.addEventListener("load", () =>
+    lazyLoad.classList.remove("lazy-load")
+  );
+});

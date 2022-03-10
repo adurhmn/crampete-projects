@@ -15,3 +15,7 @@
 .mgn-top-2 {
   margin-top: $mgn-vertical-2 !important;
 }
+
+.lazy-load {
+  filter: blur(8px) brightness(50%);
+}

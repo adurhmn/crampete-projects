@@ -160,27 +160,23 @@ body {
   padding: 12rem 15vw;
   color: #fff;
   background-position: center;
+  position: relative;
 }
 .banner > :not(:last-child) {
   margin-bottom: 2.5rem;
 }
+.banner__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  filter: brightness(70%);
+}
 .banner--hero {
   padding: 18rem 15vw;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url(../assets/img/hero-banner.jpg);
 }
-.banner--dest {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url(../assets/img/dest-banner.jpg);
-}
-.banner--privtour {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url(../assets/img/privtour-banner.jpg);
-}
-.banner--singtour {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url(../assets/img/singtour-banner.jpg);
-}
-.banner--tourlist {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url(../assets/img/tourlist-banner.jpg);
-}
-
 @media only screen and (max-width: 900px) {
   .banner {
     padding: 8rem 7vw;
@@ -1564,6 +1560,10 @@ body {
 
 .mgn-top-2 {
   margin-top: 6rem !important;
+}
+
+.lazy-load {
+  filter: blur(8px) brightness(50%);
 }
 
 /*# sourceMappingURL=style.css.map */

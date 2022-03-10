@@ -4,50 +4,61 @@
   padding: 12rem 15vw;
   color: #fff;
   background-position: center;
+  position: relative;
 
   > :not(:last-child) {
     margin-bottom: $mgn-vertical-1;
   }
 
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    filter: brightness(70%);
+  }
+
   &--hero {
     padding: 18rem 15vw;
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.3) 100%
-      ),
-      url(../assets/img/hero-banner.jpg);
+    // background-image: linear-gradient(
+    //     rgba(0, 0, 0, 0.3) 0%,
+    //     rgba(0, 0, 0, 0.3) 100%
+    //   ),
+    //   url(../assets/img/hero-banner.jpg);
   }
 
   &--dest {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.3) 100%
-      ),
-      url(../assets/img/dest-banner.jpg);
+    // background-image: linear-gradient(
+    //     rgba(0, 0, 0, 0.3) 0%,
+    //     rgba(0, 0, 0, 0.3) 100%
+    //   ),
+    //   url(../assets/img/dest-banner.jpg);
   }
 
   &--privtour {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.3) 100%
-      ),
-      url(../assets/img/privtour-banner.jpg);
+    // background-image: linear-gradient(
+    //     rgba(0, 0, 0, 0.3) 0%,
+    //     rgba(0, 0, 0, 0.3) 100%
+    //   ),
+    //   url(../assets/img/privtour-banner.jpg);
   }
 
   &--singtour {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.3) 100%
-      ),
-      url(../assets/img/singtour-banner.jpg);
+    // background-image: linear-gradient(
+    //     rgba(0, 0, 0, 0.3) 0%,
+    //     rgba(0, 0, 0, 0.3) 100%
+    //   ),
+    //   url(../assets/img/singtour-banner.jpg);
   }
 
   &--tourlist {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.3) 100%
-      ),
-      url(../assets/img/tourlist-banner.jpg);
+    // background-image: linear-gradient(
+    //     rgba(0, 0, 0, 0.3) 0%,
+    //     rgba(0, 0, 0, 0.3) 100%
+    //   ),
+    //   url(../assets/img/tourlist-banner.jpg);
   }
 }
 
