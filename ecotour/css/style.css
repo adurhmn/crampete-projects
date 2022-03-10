@@ -1279,6 +1279,7 @@ body {
   min-height: 20rem;
   position: relative;
   white-space: nowrap;
+  overflow: hidden;
 }
 .slide__img {
   position: absolute;

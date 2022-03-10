@@ -164,6 +164,7 @@
   min-height: 20rem;
   position: relative;
   white-space: nowrap;
+  overflow: hidden;
 
   &__img {
     position: absolute;

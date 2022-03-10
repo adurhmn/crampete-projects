@@ -1,5 +1,37 @@
 "use strict";
 
+////////////////////////////////////////////
+/// TAB
+////////////////////////////////////////////
+const tabs = document.querySelectorAll(".nav-item--tabs");
+
+// highlights chosen tab in navbar
+const changeTab = function (tabName) {
+  for (const tab of tabs) {
+    tab.classList.remove("nav-item-active--tabs");
+  }
+  document
+    .querySelector(`.nav-item--${tabName}`)
+    .classList.add("nav-item-active--tabs");
+};
+
+const switchTab = function (tabName) {
+  for (const tab of document.querySelectorAll(".tab")) {
+    tab.classList.add("hidden");
+  }
+  document.querySelector(`.tab--${tabName}`).classList.remove("hidden");
+};
+
+for (let tab of tabs) {
+  tab.addEventListener("click", function () {
+    changeTab(tab.dataset.tabName);
+    switchTab(tab.dataset.tabName);
+  });
+}
+
+////////////////////////////////////////////
+/// IMAGE SLIDER
+////////////////////////////////////////////
 const slides = document.querySelectorAll(".slide__img");
 let currentSlide = 0;
 
